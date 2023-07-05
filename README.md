@@ -12,7 +12,10 @@ pip install -r requirements.txt
 ```
 ### 3. Overview of cleaning
 
-Theres 17 different categories to assess.
+There are 17 different categories (DataFrame columns) to assess.
+#### 3.0 Price
+We have 475 rows with NaN as price - 2.38% of the total
+Assumption: Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
 #### 3.1 locality
 
