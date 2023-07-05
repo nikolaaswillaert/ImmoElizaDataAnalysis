@@ -14,9 +14,8 @@ pip install -r requirements.txt
 
 There are 17 different categories (DataFrame columns) to assess.
 #### 3.0 Price
-We have 475 rows with NaN as price - 2.38% of the total
-
-Assumption: Drop the NaN values (as (al)most (all) of the data is not filled out) 
+ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
+Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
 #### 3.1 locality
 No dropping / replacing needed - All values are filled out
@@ -28,12 +27,17 @@ No dropping / replacing needed - All values are filled out
 No dropping / replacing needed - All values are filled out
 
 #### 3.4 number_rooms
+No dropping / replacing needed - All values are filled out
 
 #### 3.5 living_area
+ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total
+Replacing the NaN values with the mean values of living_area grouped by property_subtype
 
 #### 3.6 kitchen
+ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED'
 
 #### 3.7 furnished
+
 
 #### 3.8 fireplace
 ASSUMPTION: raw data has -1 values. These -1 values can be changed to 0.
