@@ -1,4 +1,4 @@
-# ImmoElizaDataAnalysis
+# Data Cleaning and Analysis 
 
 ### Instructions
 I started off with a raw dataset obtained from the ImmoEliza Datascraper (https://github.com/nikolaaswillaert/ImmoEliza). This document is a csv-file.
