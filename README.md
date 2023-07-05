@@ -15,9 +15,11 @@ pip install -r requirements.txt
 There are 17 different categories (DataFrame columns) to assess.
 #### 3.0 Price
 We have 475 rows with NaN as price - 2.38% of the total
+
 Assumption: Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
 #### 3.1 locality
+No deletion needed - All values filled out
 
 #### 3.2 property_type
 
