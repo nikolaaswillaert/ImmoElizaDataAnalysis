@@ -19,34 +19,34 @@ We have 475 rows with NaN as price - 2.38% of the total
 Assumption: Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
 #### 3.1 locality
-No deletion needed - All values filled out
+No dropping / replacing needed - All values are filled out
 
 #### 3.2 property_type
+No dropping / replacing needed - All values are filled out
 
 #### 3.3 property_subtype
+No dropping / replacing needed - All values are filled out
 
-#### 3.4 price
+#### 3.4 number_rooms
 
-#### 3.5 number_rooms
+#### 3.5 living_area
 
-#### 3.6 living_area
+#### 3.6 kitchen
 
-#### 3.7 kitchen
+#### 3.7 furnished
 
-#### 3.8 furnished
-
-#### 3.9 fireplace
+#### 3.8 fireplace
 ASSUMPTION: raw data has -1 values. These -1 values can be changed to 0.
 
-#### 3.10 terrace
+#### 3.9 terrace
 
-#### 3.11 terrace_area
-#### 3.12 garden
-#### 3.13 garden_area
-#### 3.14 surface_land
-#### 3.15 number_facades
-#### 3.16 swimming_pool
-#### 3.17 building_state
+#### 3.10 terrace_area
+#### 3.11 garden
+#### 3.12 garden_area
+#### 3.13 surface_land
+#### 3.14 number_facades
+#### 3.15 swimming_pool
+#### 3.16 building_state
 
 ### Timeline
 
