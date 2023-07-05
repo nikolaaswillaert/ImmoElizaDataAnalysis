@@ -11,23 +11,26 @@ Program was written using python 3.11. Please make sure you have python 3.11 ins
 pip install -r requirements.txt
 ```
 ### 3. Overview of cleaning
-locality
-property_type
-property_subtype
-price
-number_rooms
-living_area
-kitchen
-furnished
-fireplace
-terrace
-terrace_area
-garden
-garden_area
-surface_land
-number_facades
-swimming_pool
-building_state
+
+Theres 17 different categories to assess.
+
+#### 3.1 locality
+#### 3.2 property_type
+#### 3.3 property_subtype
+#### 3.4 price
+#### 3.5 number_rooms
+#### 3.6 living_area
+#### 3.7 kitchen
+#### 3.8 furnished
+#### 3.9 fireplace
+#### 3.10 terrace
+#### 3.11 terrace_area
+#### 3.12 garden
+#### 3.13 garden_area
+#### 3.14 surface_land
+#### 3.15 number_facades
+#### 3.16 swimming_pool
+#### 3.17 building_state
 
 ### Timeline
 
