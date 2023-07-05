@@ -79,5 +79,5 @@ We have 3385 values as 0 (17.3%)
 We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
 
-## 4 Timeline
+## 4. Timeline
 Started on Monday 03/06/2023 - end on Friday 07/06/2023
