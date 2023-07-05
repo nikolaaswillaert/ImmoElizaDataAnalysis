@@ -37,7 +37,9 @@ Replacing the NaN values with the mean values of living_area grouped by property
 ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED'
 
 #### 3.7 furnished
-
+ASSUMPTION: We have 9743 rows with NaN - 49.97%% of the total
+I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished)
+Replacing False/True with 0/1
 
 #### 3.8 fireplace
 ASSUMPTION: raw data has -1 values. These -1 values can be changed to 0.
