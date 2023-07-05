@@ -15,15 +15,26 @@ pip install -r requirements.txt
 Theres 17 different categories to assess.
 
 #### 3.1 locality
+
 #### 3.2 property_type
+
 #### 3.3 property_subtype
+
 #### 3.4 price
+
 #### 3.5 number_rooms
+
 #### 3.6 living_area
+
 #### 3.7 kitchen
+
 #### 3.8 furnished
+
 #### 3.9 fireplace
+ASSUMPTION: raw data has -1 values. These -1 values can be changed to 0.
+
 #### 3.10 terrace
+
 #### 3.11 terrace_area
 #### 3.12 garden
 #### 3.13 garden_area
