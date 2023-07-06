@@ -2,7 +2,7 @@
 
 ## 1. Instructions
 I started off with a raw dataset obtained from the ImmoEliza Datascraper (https://github.com/nikolaaswillaert/ImmoEliza). This document is a csv-file.
-From this dataset, I start with cleaning and interpreting the data based on several assumptions.
+From this csv-dataset, we start cleaning and interpreting the data based on several assumptions.
 
 ## 2. Installation
 
@@ -11,14 +11,15 @@ Program was written using python 3.11. Please make sure you have python 3.11 ins
 pip install -r requirements.txt
 ```
 ## 3. Overview of cleaning
-
 There are 17 different categories (DataFrame columns) to assess.
+
 ### 3.0 Price
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
 ### 3.1 locality
 No dropping / replacing needed - All values are filled out
+Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
 ### 3.2 property_type
 No dropping / replacing needed - All values are filled out
