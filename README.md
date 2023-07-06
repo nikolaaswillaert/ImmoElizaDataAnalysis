@@ -54,6 +54,7 @@ Replacing the NaN values with the mean values of living_area grouped by property
 
 ### :cyclone: Kitchen
 ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED'
+
 ![type_of_kitchen_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/86933170-8d24-43b1-8a5e-ba5f5528c225)
 
 
