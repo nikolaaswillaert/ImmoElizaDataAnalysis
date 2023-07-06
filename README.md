@@ -111,6 +111,7 @@ Setting both values to 'UNKNOWN' category
 ## 5. Main Take Aways
 Correlations:
 - price is highly overall correlated with living_area
+  
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
 
 - number_rooms is highly overall correlated with living_area
