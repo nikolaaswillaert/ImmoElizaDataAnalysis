@@ -60,8 +60,8 @@ ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' val
 
 ### :cyclone: Furnished
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
-I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished)
-Replacing False/True with 0/1
+I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1
+
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
 
 
