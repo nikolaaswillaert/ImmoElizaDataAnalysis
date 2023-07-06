@@ -40,6 +40,7 @@ No dropping / replacing needed - All values are filled out <br>
 ![property_type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15f6cafe-158b-46e3-a0e9-25c3a5fae3dd)
 
 ### :cyclone: Property Subtype
+:exclamation: property_subtype is highly imbalanced (54.6%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out <br>
 ![property_subtype_vs_price](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42183af5-66ed-471f-afc8-a950a7e5333d)
 
@@ -61,13 +62,16 @@ ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' val
 
 
 ### :cyclone: Furnished
+:exclamation: furnished is highly imbalanced (86.4%)	 :exclamation: <br>
+
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
 I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1 <br>
 
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
 
 
-### :cyclone: Fireplace
+### :cyclone: Fireplace <br>
+:exclamation: fireplace is highly imbalanced (88.0%)	 :exclamation: <br>
 ASSUMPTION: We have 4878 rows as -1 - 25.0 % of the total
 Replace the -1 with 0 <br>
 
@@ -102,6 +106,7 @@ change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subty
 Replace the number of facades (if not filled in) by the mean 
 
 ### :cyclone: Swimming Pool
+:exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
 change False and True to 0 and 1 <br>
 ![swimmingpool](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f648159e-60db-40a0-8ce8-6e28f1d23b1f)
