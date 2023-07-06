@@ -104,7 +104,7 @@ We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
 
 ## 5. Main Take Aways
-Correlations:
+**Correlations:**
 - price is highly overall correlated with living_area <br>
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
 
@@ -121,6 +121,12 @@ Correlations:
 
 - terrace is highly overall correlated with terrace_area
 
+:exclamation: **Imbalances:** :exclamation:
+- property_subtype is highly imbalanced (54.6%)
+- furnished is highly imbalanced (86.4%)	
+- fireplace is highly imbalanced (88.0%)	
+- swimming_pool is highly imbalanced (89.8%)	
+- garden_area data is highly skewed
 
 ## 6. Timeline
 Started on Monday 03/06/2023 - end on Friday 07/06/2023
