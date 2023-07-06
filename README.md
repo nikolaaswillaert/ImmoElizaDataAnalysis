@@ -104,7 +104,10 @@ We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
 
 ## 5. Main Take Aways
-**Correlations:**
+**Correlations:** <br>
+![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
+
+
 - price is highly overall correlated with living_area <br>
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
 
