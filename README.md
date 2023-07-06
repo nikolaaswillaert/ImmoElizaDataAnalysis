@@ -43,8 +43,10 @@ No dropping / replacing needed - All values are filled out <br>
 No dropping / replacing needed - All values are filled out <br>
 ![property_subtype_vs_price](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42183af5-66ed-471f-afc8-a950a7e5333d)
 
-### :cyclone: Number Rooms
-No dropping / replacing needed - All values are filled out
+### :cyclone: Number Rooms <br>
+No dropping / replacing needed - All values are filled out <br>
+![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
+
 
 ### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
@@ -67,36 +69,42 @@ I assume that this NaN mean it is not furnished (especially Belgium not a lot of
 
 ### :cyclone: Fireplace
 ASSUMPTION: We have 4878 rows as -1 - 25.0 % of the total
-Replace the -1 with 0
+Replace the -1 with 0 <br>
 
 ASSUMPTION: We have 13323 rows as NaN - 68.33 % of the total
-Replace the NaN with 0
+Replace the NaN with 0 <br>
+
+![fireplaces](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2a9ca642-30fc-4c92-8652-e523251fa2dc)
 
 ### :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
-Replace True with 1
+Replace True with 1 <br>
+![terrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/26b3bc74-170c-4a63-942d-85f1edd5400f)
 
 ### :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
 
 ### :cyclone: Garden
-No dropping / replacing needed - All values are filled out
+No dropping / replacing needed - All values are filled out <br>
+![garden](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/75c4961b-740b-45c9-881c-43ee4fa4a5ca)
 
 ### :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
 
 ### :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
-change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype
+change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype <br>
+![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
 ### :cyclone: Number of Facades
 Replace the number of facades (if not filled in) by the mean 
 
 ### :cyclone: Swimming Pool
 No dropping / replacing needed - All values are filled out
-change False and True to 0 and 1
+change False and True to 0 and 1 <br>
+![swimmingpool](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f648159e-60db-40a0-8ce8-6e28f1d23b1f)
 
 ### :cyclone: Building State
 We have 3385 values as 0 (17.3%)
