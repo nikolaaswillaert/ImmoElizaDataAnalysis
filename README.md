@@ -23,7 +23,7 @@ There are 17 different categories (DataFrame columns) to assess.
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
-### :cyclone: locality
+### :cyclone: Locality
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
@@ -32,61 +32,61 @@ Adding Longitude and latitude based on the city name (using geocoding - opencage
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
 
-### :cyclone: property_type
+### :cyclone: Property Type
 No dropping / replacing needed - All values are filled out
 
-### :cyclone: property_subtype
+### :cyclone: Property Subtype
 No dropping / replacing needed - All values are filled out
 
-### :cyclone: number_rooms
+### :cyclone: Number Rooms
 No dropping / replacing needed - All values are filled out
 
-### :cyclone: living_area
+### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
 
-### :cyclone: kitchen
+### :cyclone: Kitchen
 ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED'
 
-### :cyclone: furnished
+### :cyclone: Furnished
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
 I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished)
 Replacing False/True with 0/1
 
-### :cyclone: fireplace
+### :cyclone: Fireplace
 ASSUMPTION: We have 4878 rows as -1 - 25.0 % of the total
 Replace the -1 with 0
 
 ASSUMPTION: We have 13323 rows as NaN - 68.33 % of the total
 Replace the NaN with 0
 
-### :cyclone: terrace
+### :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
 Replace True with 1
 
-### :cyclone: terrace_area
+### :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
 
-### :cyclone: garden
+### :cyclone: Garden
 No dropping / replacing needed - All values are filled out
 
-### :cyclone: garden_area
+### :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
 
-### :cyclone: surface_land
+### :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
 change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype
 
-### :cyclone: number_facades
+### :cyclone: Number of Facades
 Replace the number of facades (if not filled in) by the mean 
 
-### :cyclone: swimming_pool
+### :cyclone: Swimming Pool
 No dropping / replacing needed - All values are filled out
 change False and True to 0 and 1
 
-### :cyclone: building_state
+### :cyclone: Building State
 We have 3385 values as 0 (17.3%)
 We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
