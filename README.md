@@ -115,7 +115,6 @@ Setting both values to 'UNKNOWN' category
 **Correlations:** <br>
 ![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
 
-
 - price is highly overall correlated with living_area <br>
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
 
@@ -126,11 +125,11 @@ Setting both values to 'UNKNOWN' category
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
 - terrace_area is highly overall correlated with terrace <br>
-  
+![terraceareavsterrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15fa36ee-7b02-40f6-81fb-b045e377f41a)
+
 - surface_land is highly overall correlated with living_area <br>
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/bfb23fc5-1eb6-477a-9cc9-43aecbfbef25)
 
-- terrace is highly overall correlated with terrace_area
 
 :exclamation: **Imbalances:** :exclamation:
 - property_subtype is highly imbalanced (54.6%)
