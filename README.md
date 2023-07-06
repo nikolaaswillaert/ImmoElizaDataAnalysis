@@ -31,7 +31,7 @@ Below you can find the normal distribution of the Prices
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-### Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset)
+### Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) \n
 
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
@@ -110,11 +110,10 @@ Setting both values to 'UNKNOWN' category
 
 ## 5. Main Take Aways
 Correlations:
-- price is highly overall correlated with living_area
-  
+- price is highly overall correlated with living_area \n
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
 
-- number_rooms is highly overall correlated with living_area
+- number_rooms is highly overall correlated with living_area \n
 ![livingareavsnumberrooms_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2ddfafa8-3c00-499b-aef3-ea49c3098b16)
 
 - living_area is highly overall correlated with price and number_rooms, surface_land
