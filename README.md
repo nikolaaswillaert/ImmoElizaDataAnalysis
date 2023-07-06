@@ -31,36 +31,36 @@ Below you can find the normal distribution of the Prices
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-### Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) \n
+### Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) <br>
 
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
 ### :cyclone: Property Type
-No dropping / replacing needed - All values are filled out
+No dropping / replacing needed - All values are filled out <br>
 ![property_type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15f6cafe-158b-46e3-a0e9-25c3a5fae3dd)
 
 ### :cyclone: Property Subtype
-No dropping / replacing needed - All values are filled out
+No dropping / replacing needed - All values are filled out <br>
 ![property_subtype_vs_price](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42183af5-66ed-471f-afc8-a950a7e5333d)
 
 ### :cyclone: Number Rooms
 No dropping / replacing needed - All values are filled out
 
 ### :cyclone: Living Area
-ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total
+ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
 ![Living_area_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42c580d5-1d70-491b-97d6-ce573263d239)
 
 
 ### :cyclone: Kitchen
-ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED'
+ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED' <br>
 
 ![type_of_kitchen_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/86933170-8d24-43b1-8a5e-ba5f5528c225)
 
 
 ### :cyclone: Furnished
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
-I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1
+I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1 <br>
 
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
 
