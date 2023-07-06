@@ -81,16 +81,11 @@ Replace True with 1
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
 
-![terraceareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/48844699-abce-45bb-a250-ded5ffc8b293)
-
 ### :cyclone: Garden
 No dropping / replacing needed - All values are filled out
 
 ### :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
-
-![gardenareavsprice](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/76b9f6f7-262c-4378-ae16-68ea9976106b)
-
 
 ### :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
