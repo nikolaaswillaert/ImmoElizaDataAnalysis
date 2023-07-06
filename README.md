@@ -40,11 +40,14 @@ No dropping / replacing needed - All values are filled out <br>
 ![property_type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15f6cafe-158b-46e3-a0e9-25c3a5fae3dd)
 
 ### :cyclone: Property Subtype
+:exclamation: property_subtype is highly imbalanced (54.6%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out <br>
 ![property_subtype_vs_price](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42183af5-66ed-471f-afc8-a950a7e5333d)
 
-### :cyclone: Number Rooms
-No dropping / replacing needed - All values are filled out
+### :cyclone: Number Rooms <br>
+No dropping / replacing needed - All values are filled out <br>
+![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
+
 
 ### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
@@ -59,44 +62,54 @@ ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' val
 
 
 ### :cyclone: Furnished
+:exclamation: furnished is highly imbalanced (86.4%)	 :exclamation: <br>
+
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
 I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1 <br>
 
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
 
 
-### :cyclone: Fireplace
+### :cyclone: Fireplace <br>
+:exclamation: fireplace is highly imbalanced (88.0%)	 :exclamation: <br>
 ASSUMPTION: We have 4878 rows as -1 - 25.0 % of the total
-Replace the -1 with 0
+Replace the -1 with 0 <br>
 
 ASSUMPTION: We have 13323 rows as NaN - 68.33 % of the total
-Replace the NaN with 0
+Replace the NaN with 0 <br>
+
+![fireplaces](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2a9ca642-30fc-4c92-8652-e523251fa2dc)
 
 ### :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
-Replace True with 1
+Replace True with 1 <br>
+![terrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/26b3bc74-170c-4a63-942d-85f1edd5400f)
 
 ### :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
 
 ### :cyclone: Garden
-No dropping / replacing needed - All values are filled out
+No dropping / replacing needed - All values are filled out <br>
+![garden](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/75c4961b-740b-45c9-881c-43ee4fa4a5ca)
 
 ### :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
 
 ### :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
-change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype
+change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype <br>
+![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
 ### :cyclone: Number of Facades
 Replace the number of facades (if not filled in) by the mean 
 
 ### :cyclone: Swimming Pool
+:exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
-change False and True to 0 and 1
+change False and True to 0 and 1 <br>
+![swimmingpool](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f648159e-60db-40a0-8ce8-6e28f1d23b1f)
 
 ### :cyclone: Building State
 We have 3385 values as 0 (17.3%)
@@ -106,7 +119,6 @@ Setting both values to 'UNKNOWN' category
 ## 5. Main Take Aways
 **Correlations:** <br>
 ![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
-
 
 - price is highly overall correlated with living_area <br>
 ![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
@@ -118,11 +130,8 @@ Setting both values to 'UNKNOWN' category
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
 - terrace_area is highly overall correlated with terrace <br>
-  
-- surface_land is highly overall correlated with living_area <br>
-  ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/bfb23fc5-1eb6-477a-9cc9-43aecbfbef25)
+![terraceareavsterrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15fa36ee-7b02-40f6-81fb-b045e377f41a)
 
-- terrace is highly overall correlated with terrace_area
 
 :exclamation: **Imbalances:** :exclamation:
 - property_subtype is highly imbalanced (54.6%)
