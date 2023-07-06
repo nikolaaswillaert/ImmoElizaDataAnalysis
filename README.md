@@ -1,16 +1,16 @@
 #  :hammer_and_wrench: Data Cleaning and Analysis 
 
-## 1. :carpentry_saw: Instructions
+## :carpentry_saw: Instructions
 I started off with a raw dataset obtained from the **ImmoEliza Datascraper** (https://github.com/nikolaaswillaert/ImmoEliza). This document is a csv-file.
 From this **csv-dataset**, we start cleaning and interpreting the data based on several **assumptions**.
 
-## :gear: 2.  Installation
+## :gear: Installation
 
 Program was written using python 3.11. Please make sure you have **python 3.11** installed. have added the **requirements.txt** file as wel if for some reason the code would not run:
 ```
 pip install -r requirements.txt
 ```
-## :nazar_amulet: 3.  Goal 
+## :nazar_amulet: Goal 
 The goal of this project is to effectively clean a dataset obtained by scraping an **Immo website (Immoweb)**. We want to have a **fully functional pipeline** to clean the data. After cleaning the dataset we want to **visualise and analyse the data**. We will be using **matplotlib and seaborn**. After the visualisation and getting to know the data we will train a **Machine Learning model **to **predict prices** on certain houses
 
 
