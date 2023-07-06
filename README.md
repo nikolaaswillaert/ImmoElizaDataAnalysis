@@ -23,7 +23,7 @@ There are 17 different categories (DataFrame columns) to assess.
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
-Below you can find the normal distribution of the Prices
+Below you can find the normal distribution of the Prices<br>
 ![price_normal_distribution](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/5ec7b8c2-b7c0-4eef-b2b2-8b60968f9c61)
 
 
