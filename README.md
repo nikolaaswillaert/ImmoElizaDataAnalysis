@@ -33,7 +33,7 @@ There are 21 different categories (DataFrame columns) to assess.,<br>
 - number_rooms is highly overall correlated with living_area <br>
 ![livingareavsnumberrooms_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2ddfafa8-3c00-499b-aef3-ea49c3098b16)
 
-- living_area is highly overall correlated with price and number_rooms, surface_land <br>
+- living_area is highly overall correlated with surface_land <br>
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
 ## :star: Detailed Overview of the cleaning process
