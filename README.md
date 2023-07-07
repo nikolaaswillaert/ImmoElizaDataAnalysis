@@ -77,6 +77,8 @@ No dropping / replacing needed - All values are filled out <br>
 
 ### :cyclone: Number Rooms <br>
 No dropping / replacing needed - All values are filled out <br>
+
+Below a distrubution plot the values of number of rooms in the datase
 ![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
 
 ### :cyclone: Living Area
