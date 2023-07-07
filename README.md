@@ -133,6 +133,10 @@ Replace the NaN with 0 <br>
 
 ![fireplaces](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2a9ca642-30fc-4c92-8652-e523251fa2dc)
 
+Price per count Fireplaces (filtered on type of property) - boxplot <br>
+![fireplacepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d35baaa8-0fd8-488d-b841-30a6270f59f9)
+
+
 ### :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
