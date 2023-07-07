@@ -32,9 +32,6 @@ There are 21 different categories (DataFrame columns) to assess.,<br>
 - living_area is highly overall correlated with price and number_rooms, surface_land <br>
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
-- terrace_area is highly overall correlated with terrace <br>
-![terraceareavsterrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15fa36ee-7b02-40f6-81fb-b045e377f41a)
-
 ### :cyclone: Price
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
