@@ -186,6 +186,9 @@ Price if there is a swimming pool (filtered on region) - boxplot <br>
 We have 3385 values as 0 (17.3%)
 We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
+Price per buildignstate (filtered on property type) - boxplot <br>
+![buildignstatepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9dadcbb4-8028-456a-821d-52214aef4fb1)
+
 
 ## 5. Main Take Aways
 
