@@ -17,7 +17,23 @@ The goal of this project is to effectively clean a dataset obtained by scraping 
 
 ----------------------------------------------------------------------------------------------------------
 ## :star: Detailed Overview of cleaning (and thought process)
-There are 17 different categories (DataFrame columns) to assess.
+There are 21 different categories (DataFrame columns) to assess.,<br>
+'locality', 'property_type', 'property_subtype', 'price', 'number_rooms', 'living_area', 'kitchen', 'furnished', 'fireplace', 'terrace', 'terrace_area', 'garden', 'garden_area', 'surface_land', 'number_facades', 'swimming_pool', 'building_state', 'latitude', 'longitude', 'region', 'province'
+
+**Correlations:** <br>
+![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
+
+- price is highly overall correlated with living_area <br>
+![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
+
+- number_rooms is highly overall correlated with living_area <br>
+![livingareavsnumberrooms_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2ddfafa8-3c00-499b-aef3-ea49c3098b16)
+
+- living_area is highly overall correlated with price and number_rooms, surface_land <br>
+  ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
+
+- terrace_area is highly overall correlated with terrace <br>
+![terraceareavsterrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15fa36ee-7b02-40f6-81fb-b045e377f41a)
 
 ### :cyclone: Price
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
@@ -127,20 +143,7 @@ We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
 
 ## 5. Main Take Aways
-**Correlations:** <br>
-![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
 
-- price is highly overall correlated with living_area <br>
-![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
-
-- number_rooms is highly overall correlated with living_area <br>
-![livingareavsnumberrooms_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2ddfafa8-3c00-499b-aef3-ea49c3098b16)
-
-- living_area is highly overall correlated with price and number_rooms, surface_land <br>
-  ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
-
-- terrace_area is highly overall correlated with terrace <br>
-![terraceareavsterrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15fa36ee-7b02-40f6-81fb-b045e377f41a)
 
 
 :exclamation: **Imbalances:** :exclamation:
