@@ -135,7 +135,7 @@ change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subty
 ![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
 ### :cyclone: Number of Facades
-Replace the number of facades (if not filled in) by the mean 
+Replace the rounded number of facades (if not filled in) by the mean 
 
 ### :cyclone: Swimming Pool
 :exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
