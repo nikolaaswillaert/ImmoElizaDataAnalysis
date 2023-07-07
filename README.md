@@ -64,7 +64,8 @@ The prices in Brussels are generally higher than the ones in Flanders and Wallon
 
 ### :cyclone: Province <br>
 Price per Province - boxplot<br>
-![price per province boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a6ce3a7e-4b46-4b13-8963-1a57f780ca4f)
+![price per province boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b9bd8490-38c7-4376-9d67-2172f47c3408)
+
 
 ### :cyclone: Property Type <br>
 No dropping / replacing needed - All values are filled out <br>
