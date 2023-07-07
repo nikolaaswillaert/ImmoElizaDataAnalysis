@@ -81,6 +81,9 @@ No dropping / replacing needed - All values are filled out <br>
 Below a distrubution plot the values of number of rooms in the datase
 ![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
 
+Below the prices per number of rooms per region (split on property type)<br>
+![Price per rooms per property type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/893598a0-6fa5-4992-af1a-90f9c6bcc18a)
+
 ### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
