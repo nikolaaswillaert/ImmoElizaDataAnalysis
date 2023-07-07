@@ -36,9 +36,13 @@ Adding Longitude and latitude based on the city name (using geocoding - opencage
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
 ### :cyclone: Regions <br>
-
+Price per region - barplot<br>
+![price per region barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c85ce71a-08bc-4ce3-9123-1e82d7e904df)
+<br>
 
 ### :cyclone: Province <br>
+Price per Province - barplot<br>
+![price per province barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/72da4414-ca49-46e5-b64b-9a3a4712d1d2)
 
 
 ### :cyclone: Property Type <br>
