@@ -106,7 +106,11 @@ ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' val
 
 ![type_of_kitchen_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/86933170-8d24-43b1-8a5e-ba5f5528c225)
 
+Price per type of kitchen (filtered on type of property) - boxplot <br>
+![kitchenpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b53861d2-a9f5-403a-8c12-e1ced5de69bd)
 
+
+Below the boxplot of price per types of kitchen (filtered on type 
 ### :cyclone: Furnished
 :exclamation: furnished is highly imbalanced (86.4%)	 :exclamation: <br>
 
@@ -114,6 +118,9 @@ ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
 I assume that this NaN mean it is not furnished (especially Belgium not a lot of houses are sold furnished). Replacing False/True with 0/1 <br>
 
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
+
+Price of Furnished properties (filtered on type of property) - boxplot <br>
+![furnishedpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/765de310-d3de-4e09-b9b8-38264e305713)
 
 
 ### :cyclone: Fireplace <br>
@@ -125,6 +132,10 @@ ASSUMPTION: We have 13323 rows as NaN - 68.33 % of the total
 Replace the NaN with 0 <br>
 
 ![fireplaces](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2a9ca642-30fc-4c92-8652-e523251fa2dc)
+
+Price per count Fireplaces (filtered on type of property) - boxplot <br>
+![fireplacepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d35baaa8-0fd8-488d-b841-30a6270f59f9)
+
 
 ### :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
@@ -153,23 +164,33 @@ Used the IQR method to remove outlyers <br>
 
 ![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
+![pricepersurfcelandpertypeproerty](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6271921f-3fef-4a0f-b228-7aec550a1445)
+
+
 ### :cyclone: Number of Facades
 Replace the rounded number of facades (if not filled in) by the mean 
+
+Price per count facades (filtered on type of property) - boxplot <br>
+![facadespricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f3bd174e-4444-482c-a4f2-8b4278a3cd0d)
+
 
 ### :cyclone: Swimming Pool
 :exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
 change False and True to 0 and 1 <br>
-![swimmingpool](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f648159e-60db-40a0-8ce8-6e28f1d23b1f)
+Price if there is a swimming pool (filtered on region) - boxplot <br>
+![swimmingpoolpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/995bb74d-dde8-49c7-b880-e56c17e18993)
+
 
 ### :cyclone: Building State
 We have 3385 values as 0 (17.3%)
 We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
+Price per buildignstate (filtered on property type) - boxplot <br>
+![buildignstatepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9dadcbb4-8028-456a-821d-52214aef4fb1)
 
-## 5. Main Take Aways
 
-
+## Main Take Aways
 
 :exclamation: **Imbalances:** :exclamation:
 - property_subtype is highly imbalanced (54.6%)
@@ -178,5 +199,13 @@ Setting both values to 'UNKNOWN' category
 - swimming_pool is highly imbalanced (89.8%)	
 - garden_area data is highly skewed
 
-## 6. Timeline
+
+Prices are mostly correlated with:
+-   the number of rooms
+-   the living area (m2)
+-   On the region of the real estate (or province)
+-   On the state of the building
+
+
+## Timeline
 Started on Monday 03/06/2023 - end on Tuesday 11/06/2023
