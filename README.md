@@ -190,9 +190,7 @@ Price per buildignstate (filtered on property type) - boxplot <br>
 ![buildignstatepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9dadcbb4-8028-456a-821d-52214aef4fb1)
 
 
-## 5. Main Take Aways
-
-
+## Main Take Aways
 
 :exclamation: **Imbalances:** :exclamation:
 - property_subtype is highly imbalanced (54.6%)
@@ -201,5 +199,13 @@ Price per buildignstate (filtered on property type) - boxplot <br>
 - swimming_pool is highly imbalanced (89.8%)	
 - garden_area data is highly skewed
 
-## 6. Timeline
+
+- Prices are mostly correlated with:
+-   the number of rooms
+-   the living area (m2)
+-   On the region of the real estate (or province)
+-   On the state of the building
+
+
+## Timeline
 Started on Monday 03/06/2023 - end on Tuesday 11/06/2023
