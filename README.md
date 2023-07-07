@@ -89,6 +89,9 @@ ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
 ![Living_area_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42c580d5-1d70-491b-97d6-ce573263d239)
 
+Below you can find the price per living_area per region (filtered on property_type) <br>
+![Price per Living Area per region](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e282acc3-59ad-4541-bd0e-e27621ca2d6a)
+
 
 ### :cyclone: Kitchen
 ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED' <br>
