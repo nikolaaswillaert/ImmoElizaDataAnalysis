@@ -119,6 +119,9 @@ I assume that this NaN mean it is not furnished (especially Belgium not a lot of
 
 ![furnished_property_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e0c43967-31ef-4bbb-b6e7-4a3a1e333937)
 
+Price of Furnished properties (filtered on type of property) - boxplot <br>
+![furnishedpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/765de310-d3de-4e09-b9b8-38264e305713)
+
 
 ### :cyclone: Fireplace <br>
 :exclamation: fireplace is highly imbalanced (88.0%)	 :exclamation: <br>
