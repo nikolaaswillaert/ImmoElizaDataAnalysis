@@ -59,13 +59,12 @@ A wordcloud to show the most common localities of listings: <br>
 ### :cyclone: Regions <br>
 Price per region - boxplot<br>
 The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia <br>
-![price per region boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e44dd204-7de4-490d-85d3-b57baa33817d)
+![price per region boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a4cc434d-dcb9-474b-88a0-52c26adf5ebc)
 <br>
 
 ### :cyclone: Province <br>
 Price per Province - barplot<br>
-![price per province barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/72da4414-ca49-46e5-b64b-9a3a4712d1d2)
-
+![price per province boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a6ce3a7e-4b46-4b13-8963-1a57f780ca4f)
 
 ### :cyclone: Property Type <br>
 No dropping / replacing needed - All values are filled out <br>
