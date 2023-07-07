@@ -47,10 +47,10 @@ Below you can find the normal distribution of the Prices<br>
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-Heatmap of locality with **Prices as weight** (more expensive gets more weight) <br>
+Heatmap of locality with **prices as weight** (more expensive gets more weight) <br>
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 <br>
-A wordcloud to show the most common Localities of listings: <br>
+A wordcloud to show the most common localities of listings: <br>
 ![wordlcloudlocalities](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82070f7f-9070-461f-8dfa-53c805896832)
 
 ### :cyclone: Regions <br>
