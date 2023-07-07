@@ -178,9 +178,6 @@ Price per count facades (filtered on type of property) - boxplot <br>
 :exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
 change False and True to 0 and 1 <br>
-![swimmingpool](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f648159e-60db-40a0-8ce8-6e28f1d23b1f)
-
-
 Price if there is a swimming pool (filtered on region) - boxplot <br>
 ![swimmingpoolpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/995bb74d-dde8-49c7-b880-e56c17e18993)
 
