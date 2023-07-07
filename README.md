@@ -153,6 +153,9 @@ Used the IQR method to remove outlyers <br>
 
 ![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
+![pricepersurfcelandpertypeproerty](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6271921f-3fef-4a0f-b228-7aec550a1445)
+
+
 ### :cyclone: Number of Facades
 Replace the rounded number of facades (if not filled in) by the mean 
 
