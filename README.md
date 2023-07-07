@@ -77,6 +77,7 @@ No dropping / replacing needed - All values are filled out <br>
 
 ### :cyclone: Number Rooms <br>
 No dropping / replacing needed - All values are filled out <br>
+Used the IQR method to remove outlyers <br>
 
 Below a distrubution plot the values of number of rooms in the datase
 ![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
@@ -87,6 +88,8 @@ Below the prices per number of rooms per region (split on property type)<br>
 ### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
+Used the IQR method to remove outlyers <br>
+
 ![Living_area_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42c580d5-1d70-491b-97d6-ce573263d239)
 
 Below you can find the price per living_area per region (filtered on property_type) <br>
@@ -127,6 +130,7 @@ Replace True with 1 <br>
 ### :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
+Used the IQR method to remove outlyers <br>
 
 ### :cyclone: Garden
 No dropping / replacing needed - All values are filled out <br>
@@ -138,6 +142,8 @@ If there is an garden_area, that means garden should be 1 and vice versa
 ### :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
 change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype <br>
+Used the IQR method to remove outlyers <br>
+
 ![surfaceland](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9092490d-d878-4142-9a80-c8ddbd9bb4f0)
 
 ### :cyclone: Number of Facades
