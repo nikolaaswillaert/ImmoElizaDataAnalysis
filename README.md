@@ -56,7 +56,7 @@ A wordcloud to show the most common localities of listings: <br>
 
 ### :cyclone: Regions <br>
 Price per region - barplot<br>
-The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia
+The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia <br>
 ![price per region barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c85ce71a-08bc-4ce3-9123-1e82d7e904df)
 <br>
 
