@@ -24,7 +24,7 @@ There are 21 different categories (DataFrame columns) to assess.<br>
 
 ### Analysis of the correlation matrix
 - price is highly overall correlated with living_area <br>
-![livingareavsprice_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3ea8aa1-5011-45ac-bd1a-1f7ea7ea1ae3)
+![pricelivingarepertype](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3444e6c7-cea5-4f0d-9754-1590eb77d5d6)
 
 - price is highly overall correlated with number of rooms <br>
 ![price vs number of rooms](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0a248733-c550-46bb-a34f-a9c2b8a94bef)
