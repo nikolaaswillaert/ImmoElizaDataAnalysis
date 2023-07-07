@@ -44,8 +44,7 @@ Below you can find the normal distribution of the Prices<br>
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-### Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) <br>
-
+Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) <br>
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
 ### :cyclone: Regions <br>
