@@ -75,7 +75,9 @@ Price per property type - boxplot <br>
 ### :cyclone: Property Subtype
 :exclamation: property_subtype is highly imbalanced (54.6%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out <br>
-![property_subtype_vs_price](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42183af5-66ed-471f-afc8-a950a7e5333d)
+Price per property subtype - boxplot <br>
+![price per subtypeproperty boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f94f4c07-83a7-4f29-ac20-05caa1458e03)
+
 
 ### :cyclone: Number Rooms <br>
 No dropping / replacing needed - All values are filled out <br>
