@@ -200,7 +200,7 @@ Price per buildignstate (filtered on property type) - boxplot <br>
 - garden_area data is highly skewed
 
 
-- Prices are mostly correlated with:
+Prices are mostly correlated with:
 -   the number of rooms
 -   the living area (m2)
 -   On the region of the real estate (or province)
