@@ -16,7 +16,7 @@ The goal of this project is to effectively clean a dataset obtained by scraping 
 
 
 ----------------------------------------------------------------------------------------------------------
-## :star: Detailed Overview of cleaning (and thought process)
+## :star: Detailed Overview Correlation
 There are 21 different categories (DataFrame columns) to assess.,<br>
 'locality', 'property_type', 'property_subtype', 'price', 'number_rooms', 'living_area', 'kitchen', 'furnished', 'fireplace', 'terrace', 'terrace_area', 'garden', 'garden_area', 'surface_land', 'number_facades', 'swimming_pool', 'building_state', 'latitude', 'longitude', 'region', 'province'
 
@@ -36,6 +36,7 @@ There are 21 different categories (DataFrame columns) to assess.,<br>
 - living_area is highly overall correlated with price and number_rooms, surface_land <br>
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
+## :star: Detailed Overview of the cleaning process
 ### :cyclone: Price
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
