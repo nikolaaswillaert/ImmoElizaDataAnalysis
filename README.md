@@ -130,7 +130,9 @@ Replace the NaN with 0 <br>
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
 Replace True with 1 <br>
-![terrace](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/26b3bc74-170c-4a63-942d-85f1edd5400f)
+![terracevspriceperregion](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d9eab406-be3b-4e5b-828f-201b7ff44215)
+
+
 
 ### :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
