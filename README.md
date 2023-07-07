@@ -139,7 +139,7 @@ Used the IQR method to remove outlyers <br>
 
 ### :cyclone: Garden
 No dropping / replacing needed - All values are filled out <br>
-![garden](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/75c4961b-740b-45c9-881c-43ee4fa4a5ca)
+![gardenvspriceperregion](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82b36f69-611e-4203-8a01-bbc456c27db2)
 
 ### :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
