@@ -16,7 +16,7 @@ The cleaning and reasoning has been written out in the jupyernotebook.
 
 ----------------------------------------------------------------------------------------------------------
 ## :star: Detailed Overview Correlation
-There are 21 different categories (DataFrame columns) to assess.,<br>
+There are 21 different categories (DataFrame columns) to assess.<br>
 'locality', 'property_type', 'property_subtype', 'price', 'number_rooms', 'living_area', 'kitchen', 'furnished', 'fireplace', 'terrace', 'terrace_area', 'garden', 'garden_area', 'surface_land', 'number_facades', 'swimming_pool', 'building_state', 'latitude', 'longitude', 'region', 'province'
 
 **Correlations:** <br>
