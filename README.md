@@ -35,7 +35,13 @@ Adding Longitude and latitude based on the city name (using geocoding - opencage
 
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 
-### :cyclone: Property Type
+### :cyclone: Regions <br>
+
+
+### :cyclone: Province <br>
+
+
+### :cyclone: Property Type <br>
 No dropping / replacing needed - All values are filled out <br>
 ![property_type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15f6cafe-158b-46e3-a0e9-25c3a5fae3dd)
 
