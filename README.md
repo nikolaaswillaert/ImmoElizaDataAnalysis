@@ -33,7 +33,7 @@ There are 21 different categories (DataFrame columns) to assess.<br>
 ![numberroomslivinareapertype](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d473be4-730e-4377-ae6f-9009d599dbf8)
 
 - living_area is highly overall correlated with surface_land <br>
-**Note: ** this is not filtered on property type as the Apartment type does not have surface land in any of the entries
+**Note:** this is not filtered on property type as the Apartment type does not have surface land in any of the entries
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
 ## :star: Detailed Overview of the cleaning process
