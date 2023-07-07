@@ -166,4 +166,4 @@ Setting both values to 'UNKNOWN' category
 - garden_area data is highly skewed
 
 ## 6. Timeline
-Started on Monday 03/06/2023 - end on Friday 07/06/2023
+Started on Monday 03/06/2023 - end on Tuesday 11/06/2023
