@@ -49,6 +49,7 @@ Price per Province - barplot<br>
 No dropping / replacing needed - All values are filled out <br>
 ![property_type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/15f6cafe-158b-46e3-a0e9-25c3a5fae3dd)
 
+
 ### :cyclone: Property Subtype
 :exclamation: property_subtype is highly imbalanced (54.6%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out <br>
@@ -57,7 +58,6 @@ No dropping / replacing needed - All values are filled out <br>
 ### :cyclone: Number Rooms <br>
 No dropping / replacing needed - All values are filled out <br>
 ![number_rooms_histplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/11bfeee2-6c24-48b2-b0e2-6825427b109c)
-
 
 ### :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
