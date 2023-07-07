@@ -170,6 +170,10 @@ Used the IQR method to remove outlyers <br>
 ### :cyclone: Number of Facades
 Replace the rounded number of facades (if not filled in) by the mean 
 
+Price per count facades (filtered on type of property) - boxplot <br>
+![facadespricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f3bd174e-4444-482c-a4f2-8b4278a3cd0d)
+
+
 ### :cyclone: Swimming Pool
 :exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
