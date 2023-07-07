@@ -13,8 +13,6 @@ pip install -r requirements.txt
 ## :nazar_amulet: Goal 
 The goal of this project is to effectively clean a dataset obtained by scraping an **Immo website (Immoweb)**. We want to have a **fully functional pipeline** to clean the data. After cleaning the dataset we want to **visualise and analyse the data**. We will be using **matplotlib and seaborn**. After the visualisation and getting to know the data we will train a **Machine Learning model **to **predict prices** on certain houses
 
-
-
 ----------------------------------------------------------------------------------------------------------
 ## :star: Detailed Overview Correlation
 There are 21 different categories (DataFrame columns) to assess.,<br>
@@ -49,7 +47,7 @@ Below you can find the normal distribution of the Prices<br>
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-Heatmap of locality (generated at the end of the jupyter notebook - after cleaning the dataset) <br>
+Heatmap of locality with **Prices as weight** (more expensive gets more weight) <br>
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 <br>
 A wordcloud to show the most common Localities of listings: <br>
