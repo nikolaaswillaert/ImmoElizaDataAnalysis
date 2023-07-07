@@ -106,7 +106,11 @@ ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' val
 
 ![type_of_kitchen_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/86933170-8d24-43b1-8a5e-ba5f5528c225)
 
+Price per type of kitchen (filtered on type of property) - boxplot <br>
+![kitchenpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b53861d2-a9f5-403a-8c12-e1ced5de69bd)
 
+
+Below the boxplot of price per types of kitchen (filtered on type 
 ### :cyclone: Furnished
 :exclamation: furnished is highly imbalanced (86.4%)	 :exclamation: <br>
 
