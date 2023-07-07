@@ -11,7 +11,7 @@ Program was written using python 3.11. Please make sure you have **python 3.11**
 pip install -r requirements.txt
 ```
 ## :nazar_amulet: Goal 
-The goal of this project is to effectively clean a dataset obtained by scraping an **Immo website (Immoweb)**. We want to have a **fully functional pipeline** to clean the data. After cleaning the dataset we want to **visualise and analyse the data**. We will be using **matplotlib and seaborn**. After the visualisation and getting to know the data we will train a **Machine Learning model **to **predict prices** on certain houses
+The goal of this project is to effectively clean a dataset obtained by scraping an **Immo website (Immoweb)**. We want to have a **fully functional pipeline** to clean the data. After cleaning the dataset we want to **visualise and analyse the data**. We will be using **matplotlib and seaborn**. After the visualisation and getting to know the data we will train a **Machine Learning model** to **predict prices** on certain houses
 
 ----------------------------------------------------------------------------------------------------------
 ## :star: Detailed Overview Correlation
