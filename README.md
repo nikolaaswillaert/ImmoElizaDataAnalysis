@@ -27,7 +27,7 @@ There are 21 different categories (DataFrame columns) to assess.<br>
 ![pricelivingarepertype](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3444e6c7-cea5-4f0d-9754-1590eb77d5d6)
 
 - price is highly overall correlated with number of rooms <br>
-![price vs number of rooms](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0a248733-c550-46bb-a34f-a9c2b8a94bef)
+![pricenumberroomspertype](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f78e40dc-2680-4b25-b7f0-128a8c462507)
 
 - number_rooms is highly overall correlated with living_area <br>
 ![livingareavsnumberrooms_regression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2ddfafa8-3c00-499b-aef3-ea49c3098b16)
