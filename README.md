@@ -57,9 +57,9 @@ A wordcloud to show the most common localities of listings: <br>
 ![wordlcloudlocalities](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82070f7f-9070-461f-8dfa-53c805896832)
 
 ### :cyclone: Regions <br>
-Price per region - barplot<br>
+Price per region - boxplot<br>
 The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia <br>
-![price per region barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c85ce71a-08bc-4ce3-9123-1e82d7e904df)
+![price per region boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e44dd204-7de4-490d-85d3-b57baa33817d)
 <br>
 
 ### :cyclone: Province <br>
