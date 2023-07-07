@@ -54,6 +54,7 @@ Heatmap of locality (generated at the end of the jupyter notebook - after cleani
 
 ### :cyclone: Regions <br>
 Price per region - barplot<br>
+The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia
 ![price per region barplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c85ce71a-08bc-4ce3-9123-1e82d7e904df)
 <br>
 
