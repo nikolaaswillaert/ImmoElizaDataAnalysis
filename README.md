@@ -54,7 +54,8 @@ Heatmap of locality with **prices as weight** (more expensive gets more weight) 
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 <br>
 A wordcloud to show the most common localities of listings: <br>
-![wordlcloudlocalities](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82070f7f-9070-461f-8dfa-53c805896832)
+![wordlcloudlocalities](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/72b4007f-7d02-4a7b-9b33-1c6ced6487db)
+
 
 ## :cyclone: Regions <br>
 Price per region - boxplot<br>
