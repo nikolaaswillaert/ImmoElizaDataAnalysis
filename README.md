@@ -189,6 +189,10 @@ Setting both values to 'UNKNOWN' category
 Price per buildignstate (filtered on property type) - boxplot <br>
 ![buildignstatepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9dadcbb4-8028-456a-821d-52214aef4fb1)
 
+## :cyclone: Extra - Price per square meter <br>
+
+![pricepermeterpertype](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/433a9b5a-97be-4ef1-8251-cc9009c7820a)
+
 
 ## Main Take Aways
 
