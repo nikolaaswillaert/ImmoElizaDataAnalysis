@@ -37,7 +37,7 @@ There are 21 different categories (DataFrame columns) to assess.<br>
   ![surfacelandvslivingarea_regressiojn](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ec0f1c5c-b793-4ad5-b1ca-70a0e72ed0b4)
 
 ## :star: Detailed Overview of the cleaning process
-### :cyclone: Price
+## :cyclone: Price
 ASSUMPTION:  We have 475 rows with NaN as price - 2.38% of the total
 Drop the NaN values (as (al)most (all) of the data is not filled out) 
 
@@ -45,7 +45,7 @@ Below you can find the normal distribution of the Prices<br>
 ![price_normal_distribution](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/5ec7b8c2-b7c0-4eef-b2b2-8b60968f9c61)
 
 
-### :cyclone: Locality
+## :cyclone: Locality
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
@@ -56,31 +56,31 @@ Heatmap of locality with **prices as weight** (more expensive gets more weight) 
 A wordcloud to show the most common localities of listings: <br>
 ![wordlcloudlocalities](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82070f7f-9070-461f-8dfa-53c805896832)
 
-### :cyclone: Regions <br>
+## :cyclone: Regions <br>
 Price per region - boxplot<br>
 The prices in Brussels are generally higher than the ones in Flanders and Wallonia. Prices in Flanders are generally higher than the ones in Wallonia <br>
 ![price per region boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a4cc434d-dcb9-474b-88a0-52c26adf5ebc)
 <br>
 
-### :cyclone: Province <br>
+## :cyclone: Province <br>
 Price per Province - boxplot<br>
 ![price per province boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b9bd8490-38c7-4376-9d67-2172f47c3408)
 
 
-### :cyclone: Property Type <br>
+## :cyclone: Property Type <br>
 No dropping / replacing needed - All values are filled out <br>
 Price per property type - boxplot <br>
 ![price per typeproperty boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/8ec6ab63-f635-431f-a287-5c4959d39761)
 
 
-### :cyclone: Property Subtype
+## :cyclone: Property Subtype
 :exclamation: property_subtype is highly imbalanced (54.6%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out <br>
 Price per property subtype - boxplot <br>
 ![price per subtypeproperty boxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f94f4c07-83a7-4f29-ac20-05caa1458e03)
 
 
-### :cyclone: Number Rooms <br>
+## :cyclone: Number Rooms <br>
 No dropping / replacing needed - All values are filled out <br>
 Used the IQR method to remove outlyers <br>
 
@@ -90,7 +90,7 @@ Below a distrubution plot the values of number of rooms in the datase
 Below the prices per number of rooms per region (split on property type)<br>
 ![Price per rooms per property type](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/893598a0-6fa5-4992-af1a-90f9c6bcc18a)
 
-### :cyclone: Living Area
+## :cyclone: Living Area
 ASSUMPTION: We have 1054 rows with NaN - 5.41% of the total <br>
 Replacing the NaN values with the mean values of living_area grouped by property_subtype
 Used the IQR method to remove outlyers <br>
@@ -101,7 +101,7 @@ Below you can find the price per living_area per region (filtered on property_ty
 ![Price per Living Area per region](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e282acc3-59ad-4541-bd0e-e27621ca2d6a)
 
 
-### :cyclone: Kitchen
+## :cyclone: Kitchen
 ASSUMPTION: A lot of NaN values. We can convert these NaN values AND the '0' values to 'NOT_DEFINED' <br>
 
 ![type_of_kitchen_count](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/86933170-8d24-43b1-8a5e-ba5f5528c225)
@@ -111,7 +111,7 @@ Price per type of kitchen (filtered on type of property) - boxplot <br>
 
 
 Below the boxplot of price per types of kitchen (filtered on type 
-### :cyclone: Furnished
+## :cyclone: Furnished
 :exclamation: furnished is highly imbalanced (86.4%)	 :exclamation: <br>
 
 ASSUMPTION: We have 9743 rows with NaN - 49.97 % of the total
@@ -123,7 +123,7 @@ Price of Furnished properties (filtered on type of property) - boxplot <br>
 ![furnishedpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/765de310-d3de-4e09-b9b8-38264e305713)
 
 
-### :cyclone: Fireplace <br>
+## :cyclone: Fireplace <br>
 :exclamation: fireplace is highly imbalanced (88.0%)	 :exclamation: <br>
 ASSUMPTION: We have 4878 rows as -1 - 25.0 % of the total
 Replace the -1 with 0 <br>
@@ -137,7 +137,7 @@ Price per count Fireplaces (filtered on type of property) - boxplot <br>
 ![fireplacepricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d35baaa8-0fd8-488d-b841-30a6270f59f9)
 
 
-### :cyclone: Terrace
+## :cyclone: Terrace
 ASSUMPTION: We have 6612 rows as NaN - 33.91 % of the total
 Replace the NaN values with 0
 Replace True with 1 <br>
@@ -145,19 +145,19 @@ Replace True with 1 <br>
 
 
 
-### :cyclone: Terrace Area
+## :cyclone: Terrace Area
 If there is an terrace_area, that means terrace should be 1 and vice versa
 if terrace area is 0 and terrace is 1. We replace the 0 values with the mean terrace_area of that particular property_subtype
 Used the IQR method to remove outlyers <br>
 
-### :cyclone: Garden
+## :cyclone: Garden
 No dropping / replacing needed - All values are filled out <br>
 ![gardenvspriceperregion](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/82b36f69-611e-4203-8a01-bbc456c27db2)
 
-### :cyclone: Garden Area
+## :cyclone: Garden Area
 If there is an garden_area, that means garden should be 1 and vice versa
 
-### :cyclone: Surface Land
+## :cyclone: Surface Land
 ASSUMPTION: We have 1895 rows as 'UNKNOWN' - 9.7 % of the total
 change the 'UNKNOWN' to the mean_value of surface_land grouped by property_subtype <br>
 Used the IQR method to remove outlyers <br>
@@ -167,14 +167,14 @@ Used the IQR method to remove outlyers <br>
 ![pricepersurfcelandpertypeproerty](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6271921f-3fef-4a0f-b228-7aec550a1445)
 
 
-### :cyclone: Number of Facades
+## :cyclone: Number of Facades
 Replace the rounded number of facades (if not filled in) by the mean 
 
 Price per count facades (filtered on type of property) - boxplot <br>
 ![facadespricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f3bd174e-4444-482c-a4f2-8b4278a3cd0d)
 
 
-### :cyclone: Swimming Pool
+## :cyclone: Swimming Pool
 :exclamation: swimming_pool is highly imbalanced (89.8%) :exclamation: <br>
 No dropping / replacing needed - All values are filled out
 change False and True to 0 and 1 <br>
@@ -182,7 +182,7 @@ Price if there is a swimming pool (filtered on region) - boxplot <br>
 ![swimmingpoolpricetypeboxplot](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/995bb74d-dde8-49c7-b880-e56c17e18993)
 
 
-### :cyclone: Building State
+## :cyclone: Building State
 We have 3385 values as 0 (17.3%)
 We have 293 values as 'UNKNOWN' (1.5%)
 Setting both values to 'UNKNOWN' category
