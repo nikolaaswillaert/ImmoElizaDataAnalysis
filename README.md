@@ -52,7 +52,7 @@ Below you can find the normal distribution of the Prices<br>
 No dropping / replacing needed - All values are filled out
 Adding Longitude and latitude based on the city name (using geocoding - opencage)
 
-Heatmap of locality with **prices as weight** (more expensive gets more weight) <br>
+Below you cna find a heatmap of cities where properties are being put up for sale with **prices as weight** (more expensive gets more weight) <br>
 **Note:** this heatmap will be generated as an interactive .html file (when running the notebook)
 ![heatmap_example](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6d1101cc-adc9-4bef-9d2b-f216a2efa5c1)
 <br>
