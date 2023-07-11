@@ -19,9 +19,10 @@ The cleaning and reasoning has been written out in the jupyernotebook.
 There are 21 different categories (DataFrame columns) to assess.<br>
 'locality', 'property_type', 'property_subtype', 'price', 'number_rooms', 'living_area', 'kitchen', 'furnished', 'fireplace', 'terrace', 'terrace_area', 'garden', 'garden_area', 'surface_land', 'number_facades', 'swimming_pool', 'building_state', 'latitude', 'longitude', 'region', 'province'
 
-**Correlations:** <br>
+**Correlations:** <br>Below you can find the correlation matrix of the numerical columns <br>
 
-Below you can find the correlation matrix of the numerical columns: <br>
+
+
 ![correlationmatrix](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/3b2a3306-2700-4a6f-bb98-0e8493fc4451) <br>
 ----------------------------------------------------------------------------------------------------------
 ### Analysis of the correlation matrix
