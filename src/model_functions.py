@@ -1,18 +1,23 @@
-import sklearn.metrics as sm
 import pandas as pd
 import numpy as np
-from sklearn.model_selection import train_test_split, cross_val_score
+import xgboost as xgb
+import sklearn.metrics as sm
+import matplotlib.pyplot as plt
+from keras.callbacks import TensorBoard
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.callbacks import ModelCheckpoint, EarlyStopping
+from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import Pipeline
 from sklearn.linear_model import HuberRegressor
 from sklearn.tree import DecisionTreeRegressor
-import xgboost as xgb
+from sklearn.model_selection import train_test_split, cross_val_score
 
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model):
+        print(f"General metrics for Linear models: \n")
         print(f"Mean absolute error TEST = {round(sm.mean_absolute_error(y_test, y_preds), 4)}\n")
         print(f"Mean squared error TEST = {round(sm.mean_squared_error(y_test, y_preds), 4)}\n") 
         print(f"Median absolute error TEST = {round(sm.median_absolute_error(y_test, y_preds), 4)}\n")
@@ -30,6 +35,8 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model):
         plt.ylabel('Price')
         plt.legend()
 
+def neural_network_eval(y_test, y_preds):
+        print(f"R2 score *coefficient of Determination TEST = {round(sm.r2_score(y_test, y_preds), 4)}\n")
 
 def scale_data(X_train, X_test):
         scaler = MinMaxScaler()
@@ -113,4 +120,26 @@ def train_XGBoost_regression(X, y):
         y_preds = model.predict(X_test)
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+
+def train_neural_network(X,y, epochs, batch_size):
+        log_dir = './log/' 
+        tensorboard_callback = TensorBoard(log_dir=log_dir)
+        checkpoint_callback = ModelCheckpoint(filepath='./log/best_model.h5', monitor='loss', save_best_only=True)
+        early_stopping_callback = EarlyStopping(monitor='loss', patience=10)
+
+        num_features = len(X.columns)
+        model = Sequential()
+        model.add(Dense(64, activation='relu', input_shape=(num_features,)))
+        model.add(Dense(16, activation='relu'))
+        model.add(Dense(1, activation='linear')) 
+
+        model.compile(loss='mean_absolute_error', optimizer='adam')
         
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
+        X_train, X_test = scale_data(X_train, X_test)
+
+        model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, callbacks=[tensorboard_callback, checkpoint_callback, early_stopping_callback])
+
+        loss = model.evaluate(X_test, y_test)
+        y_preds = model.predict(X_test)
+        neural_network_eval(y_test, y_preds)
