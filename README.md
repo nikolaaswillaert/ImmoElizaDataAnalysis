@@ -135,12 +135,16 @@ train_neural_network(X,y, epochs, batch_size)
 ```
 ### Houses and Apartments combined <br>
 R2 score= 0.62 <br>
+loss: 74859.0938 <br>
 ![Tensorboard](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/654210ba-b050-4832-9d62-1a6b45892185)
 
 ### Houses only <br>
-R2 score = 0.6 <br>
+R2 score = 0.62 <br>
+loss: 77604.0625 <br>
+![Tensorboard 3](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e00058e8-26e8-49f8-ab92-a4937cb7ca6e)
 
 ### Apartments only <br>
 R2 score = 0.42 <br>
+loss: 77865.6250 <br>
 ![Tensorboard 2](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/25085629-a1e6-49e8-9677-9a9f0138d3b1)
 
