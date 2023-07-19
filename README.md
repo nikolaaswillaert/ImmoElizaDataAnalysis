@@ -47,7 +47,8 @@ X = df[numerical_cols].drop(columns=['price'], axis=1)
 y = df['price']
 ```
 ##Overview of the results
-The best model that was trained was the XGBoost model (R2 score of 0.8)
+The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
+![Uploading overviewmetrics.png…]()
 
 
 ## Linear Regression model <br>
