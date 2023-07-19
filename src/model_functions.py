@@ -2,6 +2,7 @@ import pandas as pd
 import xgboost as xgb
 import sklearn.metrics as sm
 import matplotlib.pyplot as plt
+import seaborn as sns
 from keras.callbacks import TensorBoard
 from keras.models import Sequential
 from keras.layers import Dense
@@ -16,26 +17,32 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
 
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model):
-        print(f"General metrics for Linear models: \n")
-        print(f"Mean absolute error TEST = {round(sm.mean_absolute_error(y_test, y_preds), 4)}\n")
-        print(f"Mean squared error TEST = {round(sm.mean_squared_error(y_test, y_preds), 4)}\n") 
-        print(f"Median absolute error TEST = {round(sm.median_absolute_error(y_test, y_preds), 4)}\n")
-        print(f"Explain variance score TEST = {round(sm.explained_variance_score(y_test, y_preds), 4)}\n")
-        print(f"R2 score *coefficient of Determination TEST = {round(sm.r2_score(y_test, y_preds), 4)}\n")
+        print(f"General metrics for Linear models: ")
+        print('--------------------------------------')
+        print(f"Mean absolute error = {round(sm.mean_absolute_error(y_test, y_preds), 4)}")
+        print(f"Mean squared error = {round(sm.mean_squared_error(y_test, y_preds), 4)}") 
+        print(f"Median absolute error = {round(sm.median_absolute_error(y_test, y_preds), 4)}")
+        print(f"Explain variance score = {round(sm.explained_variance_score(y_test, y_preds), 4)}")
+        print(f"R2 score *coefficient of Determination = {round(sm.r2_score(y_test, y_preds), 4)}")
         print('--------------------------------------')
         print(f'TRAINING SCORE: {model.score(X_train, y_train)}')
         print(f'TESTING SCORE: {model.score(X_test, y_test)}')
         print('--------------------------------------')
         scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=10)
-        print(f'Cross validation scores: \n {scores}')   
-        # plt.scatter(X_test['living_area'], y_test, marker='+', alpha=0.3, c='blue', label='Actual')
-        # plt.scatter(X_test['living_area'], y_preds, marker='o', alpha=0.3, c='red', label='Predicted')
-        plt.scatter(y_test, y_preds, alpha=0.2, c='blue')
+        print(f'Cross validation scores: \n {scores}') 
+
+        sns.scatterplot(x=y_test, y=y_preds, alpha=0.45)
+        plt.axis('equal')
         plt.xlabel('Actual price values')
         plt.ylabel('Predicted Price Values')
         title = str(model).split('(')[0]
-        plt.title(f'{title}')
-        plt.legend()
+        plt.title(f'{title} - R2 score: {round(sm.r2_score(y_test, y_preds), 4)}')
+        print("--------------------------------------")
+        print("Saving the graph in output/model_graphs")
+        print("--------------------------------------")
+        plt.tight_layout()
+        plt.savefig(f'output/model_graphs/{title}.png', format='png')
+        plt.show()
 
 def neural_network_eval(y_test, y_preds):
         print(f"R2 score *coefficient of Determination TEST = {round(sm.r2_score(y_test, y_preds), 4)}\n")
@@ -61,7 +68,7 @@ def train_linear_regr(X, y):
         y_preds = model.predict(X_test)
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
-        return y_preds
+        return y_preds, y_test
 
 def train_knn_regr(X, y, **params):
         # Scale the Numerical Data with MinMax Scaler
@@ -122,6 +129,8 @@ def train_XGBoost_regression(X, y):
         y_preds = model.predict(X_test)
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+
+        return y_test, y_preds
 
 def train_SGDregressor(X, y):
         model = SGDRegressor(max_iter=1000, tol=1e-3)
