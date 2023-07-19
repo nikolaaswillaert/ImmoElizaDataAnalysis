@@ -51,7 +51,7 @@ The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
 # Results
-## Linear Regression model <br>
+## :cyclone: Linear Regression model <br>
 ### Houses and Apartments combined <br>
 ![Linear Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/557a1539-09d7-424d-b6d2-8772d2d654c0)
 
@@ -64,7 +64,7 @@ The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
 ![Linear Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/de73ac01-a592-443a-a0cb-4d218cbb44e9)
 
 
-## K-Nearest Neighbour Regression model <br>
+## :cyclone: K-Nearest Neighbour Regression model <br>
 ### Houses and Apartments combined <br>
 Using GridSearchCV to get the best parameters:<br>
 ![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/212e60d9-4c80-40d1-a4e6-6696a5aee941)
@@ -78,7 +78,7 @@ Using GridSearchCV to get the best parameters:<br>
 ![KNN Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3201f08-32f2-4c6b-8d49-1343640d5d05)
 
 
-## HuberRegression model <br>
+## :cyclone: HuberRegression model <br>
 ### Houses and Apartments combined <br>
 ![Huber Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/21b0bc47-e6ae-452e-b9d9-ef8a559fbbd3)
 
@@ -89,7 +89,7 @@ Using GridSearchCV to get the best parameters:<br>
 ![Huber Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ade691f5-d916-41d9-b2e5-65d03aa673d5)
 
 
-## Decision Tree Regression model <br>
+## :cyclone: Decision Tree Regression model <br>
 ### Houses and Apartments combined <br>
 ![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/af56184b-e9e2-4fb9-bb3c-6b04a3871e2c)
 
@@ -101,7 +101,7 @@ Using GridSearchCV to get the best parameters:<br>
 ![Decision Tree Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c195ad28-dcc9-45a4-a3b7-10209754da15)
 
 
-## XGBoost Regression model <br>
+## :cyclone: XGBoost Regression model <br>
 ### Houses and Apartments combined <br>
 ![XGBoost Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/476e3522-97bc-4d37-a2a8-683697ddde82)
 
@@ -112,7 +112,7 @@ Using GridSearchCV to get the best parameters:<br>
 ### Apartments only <br>
 ![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0c5efffe-76fe-4d59-899c-4af39e6c61cb)
 
-## Stochastic Gradient Descent Model <br>
+## :cyclone: Stochastic Gradient Descent Model <br>
 ### Houses and Apartments combined <br>
 ![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/19c2d46f-8b4f-45f8-8af8-c4f4cf021427)
 
@@ -122,7 +122,7 @@ Using GridSearchCV to get the best parameters:<br>
 ### Apartments only <br>
 ![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e095438-0821-49ff-9860-2b886c5e3101)
 
-## Neural Network Regression <br>
+## :cyclone: Neural Network Regression <br>
 Each neural network was trained for 300 epochs with a batch_size 8
 ```
 epochs = 300
