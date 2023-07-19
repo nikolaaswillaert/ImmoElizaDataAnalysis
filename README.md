@@ -2,10 +2,10 @@
 
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 
-### Adding Postalcode feature
+## Adding Postalcode feature
 using the data/zipcode-belgium.csv file, we insert the zipcodes for the different localities
 
-### Check the correlation of the numerical columns
+## Check the correlation of the numerical columns
 ```df[numerical_cols].corr()['price'].sort_values(ascending=False)```
 ```
 price             1.000000
@@ -25,15 +25,15 @@ longitude        -0.068915
 Name: price, dtype: float64
 ```
 
-### Decision on what features to use
+## Decision on what features to use
 
-#### Numerical Features
+### Numerical Features
 I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
 ```
 numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number_facades', 'latitude', 'longitude']
 ```
 
-#### Categorical Features
+### Categorical Features
 
 ```
 cat_cols = ['property_type','property_subtype','kitchen','building_state','region','province',]
@@ -46,5 +46,17 @@ y - target column = price
 X = df[numerical_cols].drop(columns=['price'], axis=1)
 y = df['price']
 ```
+
+## Linear Regression model
+
+## K-Nearest Neighbour Regression model
+
+## HuberRegression model
+
+## Decision Tree Regression model
+
+## XGBoost Regression model
+
+## Neural Network Regression
 
 
