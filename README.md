@@ -123,13 +123,11 @@ Using GridSearchCV to get the best parameters:<br>
 ![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e095438-0821-49ff-9860-2b886c5e3101)
 
 ## :cyclone: Neural Network Regression <br>
-Each neural network was trained for 300 epochs with a batch_size 8
 run the following command in the terminal to load tensorboard:
 ```
 tensorboard --logdir=/log/train
-```
-
-
+``` 
+Each neural network was trained for 300 epochs with a batch_size 8 <br>
 ```
 epochs = 300
 batch_size = 8
