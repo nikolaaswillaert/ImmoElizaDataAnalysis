@@ -25,7 +25,7 @@ longitude        -0.068915
 Name: price, dtype: float64
 ```
 
-## Decision on what features to use
+## Feature Selection
 
 ### Numerical Features
 I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
