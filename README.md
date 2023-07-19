@@ -1,4 +1,4 @@
-# Machine learning
+# Model Price prediction
 
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 
