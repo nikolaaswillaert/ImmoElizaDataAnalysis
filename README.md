@@ -110,16 +110,13 @@ Using GridSearchCV to get the best parameters:<br>
 
 ## Stochastic Gradient Descent Model <br>
 ### Houses and Apartments combined <br>
-![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/51321729-e953-4e1c-a819-a1133a47aae6)
-
+![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/19c2d46f-8b4f-45f8-8af8-c4f4cf021427)
 
 ### Houses only <br>
-![SGD Regression (House only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a46b55f5-ee21-4950-9303-65960fcd6227)
-
+![SGD Regression (House only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/4820df40-448b-4d90-be6e-533131cc700b)
 
 ### Apartments only <br>
-![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/42a85843-003e-4b8b-a945-db34d8fc4d61)
-
+![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e095438-0821-49ff-9860-2b886c5e3101)
 
 ## Neural Network Regression <br>
 
