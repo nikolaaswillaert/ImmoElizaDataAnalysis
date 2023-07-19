@@ -1,6 +1,14 @@
 # :chart_with_upwards_trend: Model Price prediction :chart_with_upwards_trend:
 
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
+The models that have been used to predict pricing based on several features:
+ - Linear Regression
+ - K-Nearest Neighbour Regression
+ - Huber Regression
+ - Decision Tree Regression
+ - Xgboost Regression
+ - Stochastic Gradient Descent Regression
+ - Neural Network (Keras)
 
 ## :pencil2: Adding Postalcode feature
 using the data/zipcode-belgium.csv file, we insert the zipcodes for the different localities
