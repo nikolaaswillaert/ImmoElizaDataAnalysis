@@ -56,7 +56,7 @@ y = df['price']
 ```
 ## Overview of the results
 The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
-**Note:** The Neural network has not been included in this diagram
+**Note:** The Neural network has not been included in this table
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
 # Results
