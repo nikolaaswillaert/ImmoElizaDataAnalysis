@@ -48,7 +48,7 @@ y = df['price']
 ```
 ##Overview of the results
 The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
-![Uploading overviewmetrics.png…]()
+![overviewmetrics](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/65cc5021-52e6-4f98-9c1b-ff047094f250)
 
 
 ## Linear Regression model <br>
