@@ -38,3 +38,13 @@ numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number
 ```
 cat_cols = ['property_type','property_subtype','kitchen','building_state','region','province',]
 ```
+
+### Define the Features(X) and target(y)
+X - all columns except for the price
+y - target column = price
+```
+X = df[numerical_cols].drop(columns=['price'], axis=1)
+y = df['price']
+```
+
+
