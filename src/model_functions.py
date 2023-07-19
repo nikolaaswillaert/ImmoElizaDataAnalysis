@@ -16,6 +16,8 @@ from sklearn.linear_model import HuberRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
 
+SCORE_DICT = {}
+
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         print(f"General metrics for Linear models: ")
         print('--------------------------------------')
