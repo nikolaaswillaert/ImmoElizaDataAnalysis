@@ -1,4 +1,4 @@
-# Model Price prediction
+# :chart_with_upwards_trend: Model Price prediction :chart_with_upwards_trend:
 
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 
