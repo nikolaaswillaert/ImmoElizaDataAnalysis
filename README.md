@@ -87,14 +87,14 @@ Using GridSearchCV to get the best parameters:<br>
 
 ## Decision Tree Regression model <br>
 ### Houses and Apartments combined <br>
-![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c0e76dea-4c01-4f28-86c5-2c2c5f8b041f)
+![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/af56184b-e9e2-4fb9-bb3c-6b04a3871e2c)
 
 ### Houses only <br>
-![Decision Tree Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ca317511-e718-4fff-81a3-cbb380838397)
+![Decision Tree Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9ccbb3aa-4bda-41a8-989b-14510eb178c5)
 
 
 ### Apartments only <br>
-![Decision Tree Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/fbb694c8-e2fe-44c3-8495-ba7cd7f0c063)
+![Decision Tree Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c195ad28-dcc9-45a4-a3b7-10209754da15)
 
 
 ## XGBoost Regression model <br>
