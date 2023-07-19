@@ -15,6 +15,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import HuberRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
+from sklearn.model_selection import KFold, GridSearchCV
 
 
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
@@ -29,7 +30,8 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         print(f'TRAINING SCORE: {model.score(X_train, y_train)}')
         print(f'TESTING SCORE: {model.score(X_test, y_test)}')
         print('--------------------------------------')
-        scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=10)
+        kfold = KFold(n_splits = 5)
+        scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=kfold)
         print(f'Cross validation scores: \n {scores}') 
 
         sns.scatterplot(x=y_test, y=y_preds, alpha=0.45)
@@ -71,9 +73,8 @@ def train_linear_regr(X, y, title):
         return y_preds, y_test
 
 def train_knn_regr(X, y, title, **params):
-        # Scale the Numerical Data with MinMax Scaler
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
-
+        # Scale the Numerical Data with MinMax Scaler
         X_train, X_test = scale_data(X_train, X_test)
 
         model = KNeighborsRegressor(**params)
@@ -109,6 +110,7 @@ def train_huberregressor(X,y, title):
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
 def train_decessiontree_regression(X, y, title):
+        
         model = DecisionTreeRegressor()
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
