@@ -49,14 +49,22 @@ y = df['price']
 
 ## Linear Regression model <br>
 
+![LinearRegression](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/26449e50-a587-4eab-b5a4-7319e459b13b)
 
 ## K-Nearest Neighbour Regression model <br>
+![KNeighborsRegressor](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0fa90fe7-698e-41e5-995a-8689c45d5394)
 
 ## HuberRegression model <br>
+![HuberRegressor](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/db152200-4e8e-4515-a47d-41f643bb7608)
 
 ## Decision Tree Regression model <br>
+![DecisionTreeRegressor](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/64bd3da7-ff60-4b7e-88e5-65155f8a8dce)
 
 ## XGBoost Regression model <br>
+![XGBRegressor](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/f14b662c-d33b-45e4-bfe9-fe27dbb5a66d)
+
+## Stochastic Gradient Descent Model <br>
+![SGDRegressor](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d55de771-d485-406f-9fc9-bf9401febce2)
 
 ## Neural Network Regression <br>
 
