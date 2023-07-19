@@ -47,16 +47,17 @@ X = df[numerical_cols].drop(columns=['price'], axis=1)
 y = df['price']
 ```
 
-## Linear Regression model
+## Linear Regression model <br>
 
-## K-Nearest Neighbour Regression model
 
-## HuberRegression model
+## K-Nearest Neighbour Regression model <br>
 
-## Decision Tree Regression model
+## HuberRegression model <br>
 
-## XGBoost Regression model
+## Decision Tree Regression model <br>
 
-## Neural Network Regression
+## XGBoost Regression model <br>
+
+## Neural Network Regression <br>
 
 
