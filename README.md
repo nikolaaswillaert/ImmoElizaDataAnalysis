@@ -130,10 +130,11 @@ batch_size = 8
 train_neural_network(X,y, epochs, batch_size)
 ```
 ### Houses and Apartments combined <br>
-
+R2 score= 0.64
 
 ### Houses only <br>
+R2 score = 0.6
 
 ### Apartments only <br>
-
+R2 score = 0.42
 
