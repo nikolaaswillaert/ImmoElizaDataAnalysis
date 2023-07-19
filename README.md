@@ -58,6 +58,7 @@ y = df['price']
 
 ## K-Nearest Neighbour Regression model <br>
 ### Houses and Apartments combined <br>
+![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/8d9a22f2-3ff5-4105-91f1-99cd06c603bd)
 
 ### Houses only <br>
 
@@ -66,6 +67,7 @@ y = df['price']
 
 ## HuberRegression model <br>
 ### Houses and Apartments combined <br>
+![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/964e0f33-2298-4e07-b9c2-ecd521fbd12a)
 
 ### Houses only <br>
 
@@ -74,6 +76,7 @@ y = df['price']
 
 ## Decision Tree Regression model <br>
 ### Houses and Apartments combined <br>
+![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c0e76dea-4c01-4f28-86c5-2c2c5f8b041f)
 
 ### Houses only <br>
 
@@ -81,13 +84,17 @@ y = df['price']
 
 ## XGBoost Regression model <br>
 ### Houses and Apartments combined <br>
+![XGBoost Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/476e3522-97bc-4d37-a2a8-683697ddde82)
 
 ### Houses only <br>
+![XGBoost Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/4999f126-ce89-4e27-b79a-1341ea05a5fe)
 
 ### Apartments only <br>
+![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0c5efffe-76fe-4d59-899c-4af39e6c61cb)
 
 ## Stochastic Gradient Descent Model <br>
 ### Houses and Apartments combined <br>
+![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/51321729-e953-4e1c-a819-a1133a47aae6)
 
 ### Houses only <br>
 
