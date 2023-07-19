@@ -123,5 +123,17 @@ Using GridSearchCV to get the best parameters:<br>
 ![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e095438-0821-49ff-9860-2b886c5e3101)
 
 ## Neural Network Regression <br>
+Each neural network was trained for 300 epochs with a batch_size 8
+```
+epochs = 300
+batch_size = 8
+train_neural_network(X,y, epochs, batch_size)
+```
+### Houses and Apartments combined <br>
+
+
+### Houses only <br>
+
+### Apartments only <br>
 
 
