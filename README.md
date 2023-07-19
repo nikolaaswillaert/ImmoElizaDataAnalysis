@@ -138,4 +138,5 @@ R2 score = 0.6 <br>
 
 ### Apartments only <br>
 R2 score = 0.42 <br>
+![Tensorboard 2](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/25085629-a1e6-49e8-9677-9a9f0138d3b1)
 
