@@ -50,6 +50,24 @@ y = df['price']
 ## Linear Regression model <br>
 ### Houses and Apartments combined <br>
 ![Linear Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/557a1539-09d7-424d-b6d2-8772d2d654c0)
+
+```
+General metrics for Linear models: 
+--------------------------------------
+Mean absolute error = 81351.5961
+Mean squared error = 12297112277.8925
+Median absolute error = 62936.0
+Explain variance score = 0.5807
+R2 score *coefficient of Determination = 0.5806
+--------------------------------------
+TRAINING SCORE: 0.5798523419274266
+TESTING SCORE: 0.5806381257581426
+--------------------------------------
+Cross validation scores: 
+ [ 5.42733466e-01  5.46934876e-01  5.89128376e-01  5.53159927e-01
+  5.90421359e-01  5.63165105e-01 -2.16531184e+20  5.72792017e-01
+  6.10080083e-01  5.62182127e-01]
+```
 ### Houses only <br>
 ![Linear Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e33b253-b933-407f-ae0c-975d8b7aa3e7)
 ### Apartments only <br>
