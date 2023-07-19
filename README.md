@@ -57,19 +57,41 @@ y = df['price']
 
 
 ## K-Nearest Neighbour Regression model <br>
+### Houses and Apartments combined <br>
+
+### Houses only <br>
+
+### Apartments only <br>
 
 
 ## HuberRegression model <br>
+### Houses and Apartments combined <br>
+
+### Houses only <br>
+
+### Apartments only <br>
 
 
 ## Decision Tree Regression model <br>
+### Houses and Apartments combined <br>
 
+### Houses only <br>
+
+### Apartments only <br>
 
 ## XGBoost Regression model <br>
+### Houses and Apartments combined <br>
 
+### Houses only <br>
+
+### Apartments only <br>
 
 ## Stochastic Gradient Descent Model <br>
+### Houses and Apartments combined <br>
 
+### Houses only <br>
+
+### Apartments only <br>
 
 ## Neural Network Regression <br>
 
