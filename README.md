@@ -2,10 +2,10 @@
 
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 
-## Adding Postalcode feature
+## :pencil2: Adding Postalcode feature
 using the data/zipcode-belgium.csv file, we insert the zipcodes for the different localities
 
-## Check the correlation of the numerical columns
+## :pencil2: Check the correlation of the numerical columns
 ```df[numerical_cols].corr()['price'].sort_values(ascending=False)```
 ```
 price             1.000000
@@ -25,7 +25,7 @@ longitude        -0.068915
 Name: price, dtype: float64
 ```
 
-## Feature Selection
+## :pencil2: Feature Selection
 
 ### Numerical Features
 I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
