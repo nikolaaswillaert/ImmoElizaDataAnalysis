@@ -25,4 +25,16 @@ longitude        -0.068915
 Name: price, dtype: float64
 ```
 
-### 
+### Decision on what features to use
+
+#### Numerical Features
+I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
+```
+numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number_facades', 'latitude', 'longitude']
+```
+
+#### Categorical Features
+
+```
+cat_cols = ['property_type','property_subtype','kitchen','building_state','region','province',]
+```
