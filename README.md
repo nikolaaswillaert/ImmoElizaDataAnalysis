@@ -76,17 +76,13 @@ Using GridSearchCV to get the best parameters:<br>
 
 ## HuberRegression model <br>
 ### Houses and Apartments combined <br>
-![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/964e0f33-2298-4e07-b9c2-ecd521fbd12a)
-
+![Huber Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/21b0bc47-e6ae-452e-b9d9-ef8a559fbbd3)
 
 ### Houses only <br>
-![Huber Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d68d1833-ee54-4204-8352-b524556aeb8a)
-
-
+![Huber Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b3605c7c-eb0c-4542-8ee0-59511e0f9ed5)
 
 ### Apartments only <br>
-![KNN Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/54a69601-4a4c-4814-95b2-b0b9bde5bea2)
-
+![Huber Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ade691f5-d916-41d9-b2e5-65d03aa673d5)
 
 
 ## Decision Tree Regression model <br>
