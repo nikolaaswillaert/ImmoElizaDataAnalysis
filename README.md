@@ -62,9 +62,9 @@ y = df['price']
 
 ## K-Nearest Neighbour Regression model <br>
 ### Houses and Apartments combined <br>
-![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/8d9a22f2-3ff5-4105-91f1-99cd06c603bd)
-
 Using GridSearchCV to get the best parameters:
+![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/212e60d9-4c80-40d1-a4e6-6696a5aee941)
+
 
 ### Houses only <br>
 ![KNN Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/81600109-bbc5-44cc-bab0-9a2679dac0f5)
