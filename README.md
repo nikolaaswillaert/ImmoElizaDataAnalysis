@@ -60,7 +60,7 @@ The best model that was trained was the XGBoost model (R2 score of 0.8) <br>
 
 # Results
 ## :cyclone: Linear Regression model <br>
-### Houses and Apartments combined <br>
+### :house: :office: Houses and Apartments combined <br>
 ![Linear Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/557a1539-09d7-424d-b6d2-8772d2d654c0)
 
 
