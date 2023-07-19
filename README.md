@@ -27,13 +27,13 @@ Name: price, dtype: float64
 
 ## :pencil2: Feature Selection
 
-### Numerical Features
+### :bookmark: Numerical Features :bookmark:
 I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
 ```
 numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number_facades', 'latitude', 'longitude']
 ```
 
-### Categorical Features
+### :bookmark: Categorical Features :bookmark:
 
 ```
 cat_cols = ['property_type','property_subtype','kitchen','building_state','region','province',]
