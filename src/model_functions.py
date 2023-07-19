@@ -16,7 +16,7 @@ from sklearn.linear_model import HuberRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
 
-def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model):
+def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         print(f"General metrics for Linear models: ")
         print('--------------------------------------')
         print(f"Mean absolute error = {round(sm.mean_absolute_error(y_test, y_preds), 4)}")
@@ -35,7 +35,6 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model):
         plt.axis('equal')
         plt.xlabel('Actual price values')
         plt.ylabel('Predicted Price Values')
-        title = str(model).split('(')[0]
         plt.title(f'{title} - R2 score: {round(sm.r2_score(y_test, y_preds), 4)}')
         print("--------------------------------------")
         print("Saving the graph in output/model_graphs")
@@ -57,7 +56,7 @@ def scale_data(X_train, X_test):
 
         return df_train_scaled, df_test_scaled
 
-def train_linear_regr(X, y):
+def train_linear_regr(X, y, title):
         # Scale the Numerical Data with MinMax Scaler
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
 
@@ -67,10 +66,10 @@ def train_linear_regr(X, y):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
 
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
         return y_preds, y_test
 
-def train_knn_regr(X, y, **params):
+def train_knn_regr(X, y, title, **params):
         # Scale the Numerical Data with MinMax Scaler
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
 
@@ -80,12 +79,12 @@ def train_knn_regr(X, y, **params):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
         
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
         return model, X_train, X_test, y_train, y_test
 
 
-def train_polynomial_regr(X, y, degree):
+def train_polynomial_regr(X, y, degree, title):
         steps = [('polynomial', PolynomialFeatures(degree=degree)), ('linearregres', LinearRegression())]
         pipe = Pipeline(steps)
 
@@ -95,9 +94,9 @@ def train_polynomial_regr(X, y, degree):
         pipe.fit(X_train, y_train)
         y_preds = pipe.predict(X_test)
 
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, pipe)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, pipe, title)
 
-def train_huberregressor(X,y):
+def train_huberregressor(X,y, title):
         model = HuberRegressor(max_iter=1000)
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
@@ -106,9 +105,9 @@ def train_huberregressor(X,y):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
         
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-def train_decessiontree_regression(X, y):
+def train_decessiontree_regression(X, y, title):
         model = DecisionTreeRegressor()
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.22, random_state=22)
@@ -117,9 +116,9 @@ def train_decessiontree_regression(X, y):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
 
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-def train_XGBoost_regression(X, y):
+def train_XGBoost_regression(X, y, title):
         model = xgb.XGBRegressor(objective="reg:squarederror")
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
@@ -128,11 +127,11 @@ def train_XGBoost_regression(X, y):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
 
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
         return y_test, y_preds
 
-def train_SGDregressor(X, y):
+def train_SGDregressor(X, y, title):
         model = SGDRegressor(max_iter=1000, tol=1e-3)
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
@@ -141,7 +140,7 @@ def train_SGDregressor(X, y):
         model.fit(X_train, y_train)
         y_preds = model.predict(X_test)
 
-        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model)
+        linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
 def train_neural_network(X,y, epochs, batch_size):
         log_dir = './log/' 
