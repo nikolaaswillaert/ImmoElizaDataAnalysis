@@ -130,12 +130,12 @@ batch_size = 8
 train_neural_network(X,y, epochs, batch_size)
 ```
 ### Houses and Apartments combined <br>
-R2 score= 0.62
+R2 score= 0.62 <br>
 ![Tensorboard](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/654210ba-b050-4832-9d62-1a6b45892185)
 
 ### Houses only <br>
-R2 score = 0.6
+R2 score = 0.6 <br>
 
 ### Apartments only <br>
-R2 score = 0.42
+R2 score = 0.42 <br>
 
