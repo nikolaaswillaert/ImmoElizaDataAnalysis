@@ -33,7 +33,7 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=kfold)
         print(f'Cross validation scores: \n {scores}') 
 
-        sns.scatterplot(x=y_test, y=y_preds, alpha=0.45)
+        sns.regplot(x=y_test, y=y_preds, scatter_kws={"alpha": 0.45}, line_kws={"color": "red"})
         plt.axis('equal')
         plt.xlabel('Actual price values')
         plt.ylabel('Predicted Price Values')
@@ -42,7 +42,7 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         print("Saving the graph in output/model_graphs")
         print("--------------------------------------")
         plt.tight_layout()
-        #plt.savefig(f'output/model_graphs/{title}.png', format='png')
+        plt.savefig(f'output/model_graphs/{title}.png', format='png')
         plt.show()
 
 def neural_network_eval(y_test, y_preds, loss):
