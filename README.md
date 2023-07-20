@@ -66,7 +66,7 @@ X = df[numerical_cols].drop(columns=['price'], axis=1)
 y = df['price']
 ```
 ## Overview of the results
-The best model that was trained was the XGBoost model (R2 score of 0.8). With hyperparameter tuning the R2 result had increased to 0.81 <br>
+The best performing model is the XGBoost Regression model (R2 score of 0.8). With hyperparameter tuning the R2 result had increased to 0.81 <br>
 **Note:** The Neural network has not been included in this table
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
