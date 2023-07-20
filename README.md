@@ -5,12 +5,12 @@ Install the required dependencies using the following command: <br>
 ```
 pip install -r requirements.txt
 ```
-Run the main.py file to get train best possible model and the results will be written in 'output/XGB_best_model_details.txt')
+Run the **main.py** file to get train best possible model and the results will be written in 'output/XGB_best_model_details.txt')
 This model will be trained with the best hyperparameters (acquired through GridSearchCV)
 
 ## :information_source: Overview
-We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
-The models that have been used to predict pricing based on several features:
+We start from the **cleaned.csv** dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
+The models that have been used to **predict pricing based on several features**:
  - Linear Regression
  - K-Nearest Neighbour Regression
  - Huber Regression
@@ -19,7 +19,7 @@ The models that have been used to predict pricing based on several features:
  - Stochastic Gradient Descent Regression
  - Neural Network (Keras)
 
-**Note:** I have added the GridSearchCV feature to extract the best hyperparameters for (only) the XGBoost model as this regression model gave me the best initial model. After tuning a R2 score of 0.81 was acquired.
+**Note:** I have added the **GridSearchCV** feature to extract the **best hyperparameters** for (only) the **XGBoost model** as this regression model gave me the best initial model. After tuning a **R2 score of 0.81** was acquired.
 
 ## :pencil2: Adding Postalcode feature
 using the data/zipcode-belgium.csv file, we insert the zipcodes for the different localities
