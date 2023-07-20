@@ -46,8 +46,9 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         #plt.savefig(f'output/model_graphs/{title}.png', format='png')
         plt.show()
 
-def neural_network_eval(y_test, y_preds):
+def neural_network_eval(y_test, y_preds, loss):
         print(f"R2 score *coefficient of Determination TEST = {round(sm.r2_score(y_test, y_preds), 4)}\n")
+        print(f"loss = {loss}")
 
 def scale_data(X_train, X_test):
         scaler = MinMaxScaler()
@@ -166,4 +167,4 @@ def train_neural_network(X,y, epochs, batch_size):
 
         loss = model.evaluate(X_test, y_test)
         y_preds = model.predict(X_test)
-        neural_network_eval(y_test, y_preds)
+        neural_network_eval(y_test, y_preds, loss)
