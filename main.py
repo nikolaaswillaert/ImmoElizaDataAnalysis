@@ -71,7 +71,7 @@ if __name__ == '__main__':
     print('--------------------------------------')
     start_time = time.time()
     # Use GridSearchCV to try and get the best parameters
-    grid_results, best_params = grid_search_xgb(X, y)
+    grid_results, best_params = grid_search_xgb(X_train, y_train)
     print('--------------------------------------')
     print(f"Best Parameters (from GridSearchCV): {best_params}")
     print('--------------------------------------')
@@ -79,7 +79,7 @@ if __name__ == '__main__':
     print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 2)} minutes')
     print('--------------------------------------')
     print("Re-training model with best parameters . . .")
-    y_test, y_preds, model = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
+    y_test, y_preds, model, X_train, y_train = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
     end_time = time.time()
     print('--------------------------------------')
     with open('output/XGB_best_model_details.txt', 'a') as f:
