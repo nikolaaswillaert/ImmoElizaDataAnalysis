@@ -133,7 +133,7 @@ def train_XGBoost_regression(X, y, title, **params):
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-        return y_test, y_preds, model
+        return y_test, y_preds, model, X_train, y_train
 
 def train_SGDregressor(X, y, title):
         model = SGDRegressor(max_iter=1000, tol=1e-3)
