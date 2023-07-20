@@ -19,8 +19,6 @@ The models that have been used to **predict pricing based on several features**:
  - Stochastic Gradient Descent Regression
  - Neural Network (Keras)
 
-**Note:** I have added the **GridSearchCV** feature to extract the **best hyperparameters** for (only) the **XGBoost model** as this regression model gave me the best initial model. After tuning a **R2 score of 0.81** was acquired.
-
 ## :pencil2: Adding Postalcode feature
 using the data/zipcode-belgium.csv file, we insert the zipcodes for the different localities
 
@@ -137,6 +135,9 @@ Using GridSearchCV to get the best parameters:<br>
 
 
 ## :cyclone: XGBoost Regression model <br>
+
+**Note:** I have added the **GridSearchCV** feature to extract the **best hyperparameters** for (only) the **XGBoost model** as this regression model gave me the best initial model. After tuning a **R2 score of 0.81** was acquired.
+
 ### :house: :office: Houses and Apartments combined <br>
 ![XGBoost Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/476e3522-97bc-4d37-a2a8-683697ddde82)
 
