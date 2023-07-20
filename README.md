@@ -71,13 +71,11 @@ The best model that was trained was the XGBoost model (R2 score of 0.8). With hy
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
 
-:pushpin: Mean Absolute Error (MAE) is 54042.1821: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
+:pushpin: Mean Absolute Error (MAE) is 54885.9907: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
 
-:pushpin: Median Absolute Error is 39330.4688: This metric represents the median of the absolute errors between predictions and actual values. It suggests that 50% of the model's predictions have an absolute error of approximately 39330.4688 or less.
+:pushpin: Explained Variance Score is 0.8035: The explained variance score assesses the proportion of variance in the target variable that the model captures. A value of 0.8074 indicates that the model explains 80.74% of the total variance in the data, which is quite good.
 
-:pushpin: Explained Variance Score is 0.8074: The explained variance score assesses the proportion of variance in the target variable that the model captures. A value of 0.8074 indicates that the model explains 80.74% of the total variance in the data, which is quite good.
-
-:pushpin: R-squared (R2) Score is 0.8074: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
+:pushpin: R-squared (R2) Score is 0.8034: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
 
 In summary, the model achieves a **high level of accuracy**, capturing a significant portion of the variance in the data and making predictions that are **close to the actual values**.
 
