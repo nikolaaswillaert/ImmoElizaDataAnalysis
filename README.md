@@ -70,6 +70,20 @@ The best model that was trained was the XGBoost model (R2 score of 0.8). With hy
 **Note:** The Neural network has not been included in this table
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
+    Mean Absolute Error (MAE) is 54042.1821: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
+
+    Median Absolute Error is 39330.4688: This metric represents the median of the absolute errors between predictions and actual values. It suggests that 50% of the model's predictions have an absolute error of approximately 39330.4688 or less.
+
+    Explained Variance Score is 0.8074: The explained variance score assesses the proportion of variance in the target variable that the model captures. A value of 0.8074 indicates that the model explains 80.74% of the total variance in the data, which is quite good.
+
+    R-squared (R2) Score is 0.8074: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
+
+In summary, the model achieves a high level of accuracy, capturing a significant portion of the variance in the data and making predictions that are close to the actual values.
+
+Regarding its training and testing performance, the model has been trained well with a training score of 0.9253, suggesting that it has learned from the training data effectively. When evaluated on the testing data, it performs impressively with a testing score of 0.8074, which is consistent with the R2 score mentioned earlier.
+
+Finally, the cross-validation scores further validate the model's generalization ability, as all the scores are relatively high and close to the testing score. This means the model is robust and reliable, and it is likely to perform well on new, unseen data.
+
 # Results
 ## :cyclone: Linear Regression model <br>
 ### :house: :office: Houses and Apartments combined <br>
