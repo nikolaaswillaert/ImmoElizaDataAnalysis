@@ -77,10 +77,8 @@ The best performing model is the XGBoost Regression model (R2 score of 0.8). Wit
 
 :pushpin: R-squared (R2) Score is 0.8034: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
 
-In summary, the model achieves a **high level of accuracy**, capturing a significant portion of the variance in the data and making predictions that are **close to the actual values**.
-
+:card_index: In summary, the model achieves a **high level of accuracy**, capturing a significant portion of the variance in the data and making predictions that are **close to the actual values**.
 Regarding its training and testing performance, the **model has been trained well with a training score of 0.9253**, suggesting that it has learned from the training data effectively. When evaluated on the testing data, it performs very well with a **testing score of 0.8074**, which is **consistent with the R2 score** mentioned earlier.
-
 Finally, **the cross-validation scores** further validate the model's **generalization ability**, as all the scores are relatively high and close to the testing score. This means the **model is robust and reliable**, and it is likely to perform well on new, unseen data.
 
 # Results
