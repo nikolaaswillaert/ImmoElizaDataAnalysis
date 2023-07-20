@@ -5,7 +5,7 @@ Install the neede dependencies using: <br>
 ```
 pip install -r requirements.txt
 ```
-
+## Overview
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 The models that have been used to predict pricing based on several features:
  - Linear Regression
