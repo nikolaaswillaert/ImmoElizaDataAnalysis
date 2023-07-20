@@ -5,10 +5,10 @@ Install the required dependencies using the following command: <br>
 ```
 pip install -r requirements.txt
 ```
-Run the **main.py** file to get train best possible model and the results will be written in 'output/XGB_best_model_details.txt')
+Run the **main.py** file to get train best possible model and the results will be written in 'output/XGB_best_model_details.txt'
 This model will be trained with the best hyperparameters (acquired through GridSearchCV)
 
-In the 'model_exploration.ipynb' notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result.
+In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result.
 
 ## :information_source: Overview
 We start from the **cleaned.csv** dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
