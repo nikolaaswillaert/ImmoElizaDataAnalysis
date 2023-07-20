@@ -46,6 +46,8 @@ Name: price, dtype: float64
 
 ## :pencil2: Feature Selection
 
+When doing the data visualisation of the dataset (see data-exploration/Visualisation_Notebook.ipynb), we quickly get a grasp on how the data is structured and what features might have the most influence on the total property price. Taking these visualisations and knowledge into account we select a select set of features
+
 ### :bookmark: Numerical Features :bookmark:
 I make a calculated decision on what features to include into the model (using top 4 numerical columns of correlation with price)
 ```
