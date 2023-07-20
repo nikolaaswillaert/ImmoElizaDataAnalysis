@@ -87,52 +87,60 @@ The best performing model is the XGBoost Regression model (R2 score of 0.8). Wit
 # Results
 ## :cyclone: Linear Regression model <br>
 ### :house: :office: Houses and Apartments combined <br>
-![Linear Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/557a1539-09d7-424d-b6d2-8772d2d654c0)
+![Linear Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d3b52656-0c8b-43ac-9c99-15bc8ac77b3f)
 
 
 ### :house: Houses only <br>
-![Linear Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e33b253-b933-407f-ae0c-975d8b7aa3e7)
+![Linear Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/8019805d-5393-4d97-97fc-34af6996b0ad)
 
 
 ### :office: Apartments only <br>
-![Linear Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/de73ac01-a592-443a-a0cb-4d218cbb44e9)
+![Linear Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/09a789aa-5733-425f-8732-b8739296d9e4)
+
 
 
 ## :cyclone: K-Nearest Neighbour Regression model <br>
 ### :house: :office: Houses and Apartments combined <br>
 Using GridSearchCV to get the best parameters:<br>
-![KNN Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/212e60d9-4c80-40d1-a4e6-6696a5aee941)
+![KNN Regression (houses + apartments GridSearch)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/27fb3dce-87d4-465c-b6bf-a27501a6745a)
+
 
 
 ### :house: Houses only <br>
-![KNN Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/81600109-bbc5-44cc-bab0-9a2679dac0f5)
+![KNN Regression (Houses only) - GridSearch](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/e27eff09-7eba-4ccc-a0dd-f805facb32d9)
 
 
 ### :office: Apartments only <br>
-![KNN Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c3201f08-32f2-4c6b-8d49-1343640d5d05)
+![KNN Regression (Apartments only) - GridSearch](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/8dd7af08-2fd3-42d1-bf7d-907b97d79e20)
+
 
 
 ## :cyclone: HuberRegression model <br>
 ### :house: :office: Houses and Apartments combined <br>
-![Huber Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/21b0bc47-e6ae-452e-b9d9-ef8a559fbbd3)
+![Huber Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2e4323f6-eb76-46a1-aae8-2b7271294b6f)
+
 
 ### :house: Houses only <br>
-![Huber Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/b3605c7c-eb0c-4542-8ee0-59511e0f9ed5)
+![Huber Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/2433d815-6e7d-457e-b6b3-2e95a06220da)
+
 
 ### :office: Apartments only <br>
-![Huber Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/ade691f5-d916-41d9-b2e5-65d03aa673d5)
+![Huber Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/52ef1107-3160-4e17-9970-4f6d146b1720)
+
 
 
 ## :cyclone: Decision Tree Regression model <br>
 ### :house: :office: Houses and Apartments combined <br>
-![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/af56184b-e9e2-4fb9-bb3c-6b04a3871e2c)
+![Decision Tree Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/d964428a-eab8-4205-af88-14e9c057194f)
 
 ### :house: Houses only <br>
-![Decision Tree Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/9ccbb3aa-4bda-41a8-989b-14510eb178c5)
+![Decision Tree Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a4934bf4-14f0-4420-b328-2eec670dd856)
+
 
 
 ### :office: Apartments only <br>
-![Decision Tree Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c195ad28-dcc9-45a4-a3b7-10209754da15)
+![Huber Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a78f5a67-9003-4809-91fa-8b2f8ebd962a)
+
 
 
 ## :cyclone: XGBoost Regression model <br>
@@ -140,24 +148,28 @@ Using GridSearchCV to get the best parameters:<br>
 **Note:** I have added the **GridSearchCV** feature to extract the **best hyperparameters** for (only) the **XGBoost model** as this regression model gave me the best initial model. After tuning a **R2 score of 0.81** was acquired.
 
 ### :house: :office: Houses and Apartments combined <br>
-![XGBoost Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/476e3522-97bc-4d37-a2a8-683697ddde82)
+![XGBoost Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/a84d6536-4d4c-4a7d-921c-8e4bfef38ec8)
 
 
 ### :house: Houses only <br>
-![XGBoost Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/4999f126-ce89-4e27-b79a-1341ea05a5fe)
+![XGBoost Regression (Houses only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/6e7f7ac2-cc84-462b-8f85-2cc15ccb5168)
 
 ### :office: Apartments only <br>
-![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0c5efffe-76fe-4d59-899c-4af39e6c61cb)
+![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c36fcd17-f2e8-445c-8638-5951389dffdf)
+
 
 ## :cyclone: Stochastic Gradient Descent Model <br>
 ### :house: :office: Houses and Apartments combined <br>
-![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/19c2d46f-8b4f-45f8-8af8-c4f4cf021427)
+![SGD Regression (houses + apartments)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/eef8ac8d-6834-4ba7-a951-03beb084c075)
+
 
 ### :house: Houses only <br>
-![SGD Regression (House only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/4820df40-448b-4d90-be6e-533131cc700b)
+![SGD Regression (House only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/545d8c5d-1a5a-46aa-8418-8d63bc55d960)
+
 
 ### :office: Apartments only <br>
-![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/0e095438-0821-49ff-9860-2b886c5e3101)
+![SGD Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/399d02ad-fb77-45de-8fcc-68a09e631a1e)
+
 
 ## :cyclone: Neural Network Regression <br>
 run the following command in the terminal to load tensorboard:
