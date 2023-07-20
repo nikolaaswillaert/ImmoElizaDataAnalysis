@@ -11,7 +11,7 @@ from sklearn.model_selection import train_test_split, cross_val_score
 def grid_search_xgb(X_train, y_train):
     params = {
             #'eta':[0.2,0.3,0.5],
-            'alpha':[0, 0.001, 0.01],
+            #'alpha':[0, 0.001, 0.01],
             'learning_rate': [0.05, 0.10, 0.15],
             'max_depth': [9,10,12],
             'min_child_weight': [1, 3, 5],
@@ -66,7 +66,7 @@ if __name__ == '__main__':
     X = new_df.drop(columns=['price'], axis=1)
     y = new_df['price']
     # train test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=22)
     print('--------------------------------------')
     print("Getting the best parameters for Xgboost through GridSearchCV")
     print('--------------------------------------')

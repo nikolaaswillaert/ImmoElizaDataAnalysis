@@ -17,3 +17,129 @@ Cross validation scores:
  [0.77226065 0.78446775 0.78387545 0.77399484 0.76239619]
 
  
+2023-07-20 12:27:10.612562
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'alpha': 0, 'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 1}
+-------------------------------
+Mean absolute error = 53847.1644
+Mean squared error = 5601297713.7305
+Median absolute error = 39897.4922
+Explain variance score = 0.8116
+R2 score *coefficient of Determination = 0.8116
+--------------------------------------
+TRAINING SCORE: 0.9335995115730613
+TESTING SCORE: 0.8116417815628166
+--------------------------------------
+Cross validation scores: 
+ [0.77226065 0.78446775 0.78387545 0.77399484 0.76239619]
+
+ 
+2023-07-20 13:26:41.292790
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 10, 'min_child_weight': 3}
+-------------------------------
+Mean absolute error = 56211.5337
+Mean squared error = 6881865634.3778
+Median absolute error = 37960.1328
+Explain variance score = 0.7664
+R2 score *coefficient of Determination = 0.7664
+--------------------------------------
+TRAINING SCORE: 0.9456917668906907
+TESTING SCORE: 0.7664128268180114
+--------------------------------------
+Cross validation scores: 
+ [0.78521776 0.79856628 0.7977057  0.77955591 0.77671745]
+
+ 
+2023-07-20 13:32:38.827315
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 10, 'min_child_weight': 1}
+-------------------------------
+Mean absolute error = 55417.1648
+Mean squared error = 6774406801.778
+Median absolute error = 37167.2734
+Explain variance score = 0.7701
+R2 score *coefficient of Determination = 0.7701
+--------------------------------------
+TRAINING SCORE: 0.9563780322814192
+TESTING SCORE: 0.7700602396380223
+--------------------------------------
+Cross validation scores: 
+ [0.78229869 0.79884503 0.79530259 0.77663171 0.7729568 ]
+
+ 
+2023-07-20 13:38:19.160962
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3}
+-------------------------------
+Mean absolute error = 57187.695
+Mean squared error = 6927311990.7134
+Median absolute error = 38686.0469
+Explain variance score = 0.7649
+R2 score *coefficient of Determination = 0.7649
+--------------------------------------
+TRAINING SCORE: 0.9290987564891439
+TESTING SCORE: 0.7648702675075193
+--------------------------------------
+Cross validation scores: 
+ [0.78383506 0.79805851 0.7958197  0.77657439 0.77442566]
+
+ 
+2023-07-20 13:44:09.317936
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 1}
+-------------------------------
+Mean absolute error = 57217.1006
+Mean squared error = 6848045878.7273
+Median absolute error = 38543.8359
+Explain variance score = 0.7676
+R2 score *coefficient of Determination = 0.7676
+--------------------------------------
+TRAINING SCORE: 0.9372801474838652
+TESTING SCORE: 0.7675607511658284
+--------------------------------------
+Cross validation scores: 
+ [0.78114954 0.80014109 0.79529218 0.77905013 0.77247669]
+
+ 
+2023-07-20 13:50:12.030739
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3}
+-------------------------------
+Mean absolute error = 54042.1821
+Mean squared error = 5646794265.1599
+Median absolute error = 39330.4688
+Explain variance score = 0.8074
+R2 score *coefficient of Determination = 0.8074
+--------------------------------------
+TRAINING SCORE: 0.9253120269225902
+TESTING SCORE: 0.8074303809722169
+--------------------------------------
+Cross validation scores: 
+ [0.78215445 0.7817122  0.7792902  0.77348451 0.76358754]
+
+ 
+2023-07-20 13:56:19.185832
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 9, 'min_child_weight': 3}
+-------------------------------
+Mean absolute error = 55700.5321
+Mean squared error = 5930459070.6007
+Median absolute error = 39916.3125
+Explain variance score = 0.8003
+R2 score *coefficient of Determination = 0.8003
+--------------------------------------
+TRAINING SCORE: 0.9273082729111772
+TESTING SCORE: 0.8002783474956698
+--------------------------------------
+Cross validation scores: 
+ [0.77463949 0.79939385 0.76534633 0.77499304 0.75649368]
+
+ 

@@ -124,7 +124,7 @@ def train_decessiontree_regression(X, y, title):
 def train_XGBoost_regression(X, y, title, **params):
         model = XGBRegressor(**params)
 
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=22)
         X_train, X_test = scale_data(X_train, X_test)
 
         model.fit(X_train, y_train)
