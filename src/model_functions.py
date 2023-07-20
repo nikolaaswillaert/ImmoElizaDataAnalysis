@@ -33,6 +33,14 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=kfold)
         print(f'Cross validation scores: \n {scores}') 
 
+        residuals = y_test - y_preds
+        plt.scatter(y_test, residuals)
+        plt.axhline(y=0, color='r', linestyle='--')  # Adding a horizontal line at y=0 for reference
+        plt.xlabel('Actual Values')
+        plt.ylabel('Residuals')
+        plt.title(f'{title} Residuals')
+        plt.show()
+
         sns.regplot(x=y_test, y=y_preds, scatter_kws={"alpha": 0.45}, line_kws={"color": "red"})
         plt.axis('equal')
         plt.xlabel('Actual price values')
