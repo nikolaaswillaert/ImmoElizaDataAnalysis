@@ -1,5 +1,5 @@
 import pandas as pd
-import xgboost as xgb
+from xgboost import XGBRegressor
 import sklearn.metrics as sm
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,7 +15,7 @@ from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import HuberRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.model_selection import KFold, GridSearchCV
+from sklearn.model_selection import KFold
 
 
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
@@ -121,8 +121,8 @@ def train_decessiontree_regression(X, y, title):
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-def train_XGBoost_regression(X, y, title):
-        model = xgb.XGBRegressor(objective="reg:squarederror")
+def train_XGBoost_regression(X, y, title, **params):
+        model = XGBRegressor(**params)
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
         X_train, X_test = scale_data(X_train, X_test)
@@ -132,7 +132,7 @@ def train_XGBoost_regression(X, y, title):
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-        return y_test, y_preds
+        return y_test, y_preds, model
 
 def train_SGDregressor(X, y, title):
         model = SGDRegressor(max_iter=1000, tol=1e-3)
