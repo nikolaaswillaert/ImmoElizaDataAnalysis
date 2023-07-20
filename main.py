@@ -9,30 +9,30 @@ from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split, cross_val_score
 
 def grid_search_xgb(X_train, y_train):
-  params = {
-        'eta':[0.2,0.3,0.5],
-        'learning_rate': [0.05, 0.10, 0.15],
-        'max_depth': [9,10,12,13,15],
-        'min_child_weight': [1, 3, 5],
-        'gamma': [0.0, 0.1, 0.2],
-        'colsample_bytree': [0.1,0.2,0.3,0.4],
-        'alpha':[0, 0.001, 0.01]
-    }
-  
-  gsc = GridSearchCV(
-    estimator=XGBRegressor(),
-    param_grid=params,
-    cv=5,
-    scoring='r2',
-    verbose=0,
-    n_jobs=-1)
-  
-  grid_result = gsc.fit(X_train, y_train)
-  best_params = grid_result.best_params_
-  return grid_result, best_params
+    params = {
+            'eta':[0.2,0.3,0.5],
+            'learning_rate': [0.05, 0.10, 0.15],
+            'max_depth': [9,10,12,13,15],
+            'min_child_weight': [1, 3, 5],
+            'gamma': [0.0, 0.1, 0.2],
+            'colsample_bytree': [0.1,0.2,0.3,0.4],
+            'alpha':[0, 0.001, 0.01]
+        }
+    
+    gsc = GridSearchCV(
+        estimator=XGBRegressor(),
+        param_grid=params,
+        cv=5,
+        scoring='r2',
+        verbose=0,
+        n_jobs=-1)
+    
+    grid_result = gsc.fit(X_train, y_train)
+    best_params = grid_result.best_params_
+    return grid_result, best_params
 
 def preprocess_data():
-    # Add postcodes to the table
+    # Read in and clean postcode dataframe 
     postcodes = pd.read_csv('data/zipcode-belgium.csv')
     postcodes = postcodes.drop(columns=['lat', 'long'])
     postcodes.head()
@@ -40,6 +40,7 @@ def preprocess_data():
     # Load in cleaned dataset
     df = pd.read_csv('data/cleaned.csv').drop('Unnamed: 0', axis=1)
     df.drop_duplicates()
+
     # merge postalcodes with the cleaned dataset
     postalcode_merge_df = pd.merge(postcodes, df, on='locality', how='left')
     postalcode_merge_df.drop_duplicates()
@@ -58,15 +59,19 @@ def preprocess_data():
     return new_df
 
 if __name__ == '__main__':
+    # retrieve the cleaned dataset with additional post codes features
     new_df = preprocess_data()
+    # Define X and y (features and target)
     X = new_df.drop(columns=['price'], axis=1)
     y = new_df['price']
+    # train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=22)
     print('--------------------------------------')
     print("Getting the best parameters for Xgboost through GridSearchCV")
     print('--------------------------------------')
     start_time = time.time()
-    grid_results, best_params = grid_search_xgb(X_train, y_train)
+    # Use GridSearchCV to try and get the best parameters
+    grid_results, best_params = grid_search_xgb(X, y)
     print('--------------------------------------')
     print(f"Best Parameters (from GridSearchCV): {best_params}")
     print('--------------------------------------')
@@ -77,7 +82,7 @@ if __name__ == '__main__':
     y_test, y_preds, model = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
     end_time = time.time()
     print('--------------------------------------')
-    with open('XGB_best_model_details.txt', 'a') as f:
+    with open('output/XGB_best_model_details.txt', 'a') as f:
        f.write(f'{datetime.datetime.now()}\n')
        f.write('XGBOOST REGRESSION - HYPERPARAMETER TUNING\n')
        f.write('Best parameters:\n')
