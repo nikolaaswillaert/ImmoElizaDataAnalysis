@@ -40,6 +40,8 @@ def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         plt.ylabel('Residuals')
         plt.title(f'{title} Residuals')
         plt.show()
+        plt.tight_layout()
+        plt.savefig(f'output/model_graphs/{title}.png', format='png')
 
         sns.regplot(x=y_test, y=y_preds, scatter_kws={"alpha": 0.45}, line_kws={"color": "red"})
         plt.axis('equal')
