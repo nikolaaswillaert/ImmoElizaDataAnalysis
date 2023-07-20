@@ -1,10 +1,13 @@
 # :chart_with_upwards_trend: Model Price prediction :chart_with_upwards_trend:
 
 ## :information_source: Installation
-Install the neede dependencies using: <br>
+Install the required dependencies using the following command: <br>
 ```
 pip install -r requirements.txt
 ```
+Run the main.py file to get train best possible model and the results will be written in 'output/XGB_best_model_details.txt')
+This model will be trained with the best hyperparameters.
+
 ## :information_source: Overview
 We start from the cleaned.csv dataset we acquired from the Data cleaning (see data-exploration/Main_DataCleaning_notebook.ipynb)
 The models that have been used to predict pricing based on several features:
