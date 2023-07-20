@@ -70,6 +70,7 @@ The best performing model is the XGBoost Regression model (R2 score of 0.8). Wit
 **Note:** The Neural network has not been included in this table
 ![Pasted image](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c45ff30e-4b5e-4e52-8f88-9835500a6acd)
 
+**XGBoost Regression**
 
 :pushpin: Mean Absolute Error (MAE) is 54885.9907: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
 
