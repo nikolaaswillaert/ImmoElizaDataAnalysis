@@ -10,13 +10,14 @@ from sklearn.model_selection import train_test_split, cross_val_score
 
 def grid_search_xgb(X_train, y_train):
     params = {
-            'eta':[0.2,0.3,0.5],
+            #'eta':[0.2,0.3,0.5],
+            'alpha':[0, 0.001, 0.01],
             'learning_rate': [0.05, 0.10, 0.15],
-            'max_depth': [9,10,12,13,15],
+            'max_depth': [9,10,12],
             'min_child_weight': [1, 3, 5],
             'gamma': [0.0, 0.1, 0.2],
-            'colsample_bytree': [0.1,0.2,0.3,0.4],
-            'alpha':[0, 0.001, 0.01]
+            'colsample_bytree': [0.1,0.2,0.3],
+            
         }
     
     gsc = GridSearchCV(
@@ -79,7 +80,7 @@ if __name__ == '__main__':
     print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 2)} minutes')
     print('--------------------------------------')
     print("Re-training model with best parameters . . .")
-    y_test, y_preds, model, X_train, y_train = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
+    y_test, y_preds, model, X_train, y_train, X_test = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
     end_time = time.time()
     print('--------------------------------------')
     with open('output/XGB_best_model_details.txt', 'a') as f:

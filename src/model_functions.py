@@ -17,7 +17,6 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.model_selection import KFold
 
-
 def linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title):
         print(f"General metrics for Linear models: ")
         print('--------------------------------------')
@@ -133,7 +132,7 @@ def train_XGBoost_regression(X, y, title, **params):
 
         linear_evaluation(X_train, X_test, y_train, y_test, y_preds, model, title)
 
-        return y_test, y_preds, model, X_train, y_train
+        return y_test, y_preds, model, X_train, y_train, X_test
 
 def train_SGDregressor(X, y, title):
         model = SGDRegressor(max_iter=1000, tol=1e-3)
