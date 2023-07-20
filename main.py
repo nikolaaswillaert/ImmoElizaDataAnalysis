@@ -10,11 +10,13 @@ from sklearn.model_selection import train_test_split, cross_val_score
 
 def grid_search_xgb(X_train, y_train):
   params = {
+        'eta':[0.2,0.3,0.5],
         'learning_rate': [0.05, 0.10, 0.15],
-        'max_depth': [7,8,10],
+        'max_depth': [9,10,12,13,15],
         'min_child_weight': [1, 3, 5],
         'gamma': [0.0, 0.1, 0.2],
-        'colsample_bytree': [0.3, 0.4],
+        'colsample_bytree': [0.1,0.2,0.3,0.4],
+        'alpha':[0, 0.001, 0.01]
     }
   
   gsc = GridSearchCV(
@@ -50,6 +52,7 @@ def preprocess_data():
     # create dummies van categorical columns
     dummies = pd.get_dummies(df[cat_cols], columns=cat_cols)
 
+    # merge the 
     new_df = pd.concat([df[numerical_cols], dummies], axis=1)
     new_df.reset_index().drop(columns=['index'], inplace=True)
     return new_df
@@ -68,30 +71,28 @@ if __name__ == '__main__':
     print(f"Best Parameters (from GridSearchCV): {best_params}")
     print('--------------------------------------')
     end_time = time.time()
-    print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 3)} minutes')
-
-    start_time = time.time()
+    print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 2)} minutes')
     print('--------------------------------------')
     print("Re-training model with best parameters . . .")
-    y_test, y_preds, model = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearchTrain', **best_params)
+    y_test, y_preds, model = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
     end_time = time.time()
-    print(f'Elapsed time to (re)train with best parameters: {round(((end_time - start_time)/60), 3)} minutes')
     print('--------------------------------------')
     with open('XGB_best_model_details.txt', 'a') as f:
-       f.write(datetime.datetime.now())
-       f.write('XGBOOST REGRESSION - HYPERPARAMETER TUNING')
-       f.write('Best parameters:')
-       f.write(f'{best_params}')
-       f.write(f'-------------------------------')
-       f.write(f"Mean absolute error = {round(sm.mean_absolute_error(y_test, y_preds), 4)}")
-       f.write(f"Mean squared error = {round(sm.mean_squared_error(y_test, y_preds), 4)}") 
-       f.write(f"Median absolute error = {round(sm.median_absolute_error(y_test, y_preds), 4)}")
-       f.write(f"Explain variance score = {round(sm.explained_variance_score(y_test, y_preds), 4)}")
-       f.write(f"R2 score *coefficient of Determination = {round(sm.r2_score(y_test, y_preds), 4)}")
-       f.write('--------------------------------------')
-       f.write(f'TRAINING SCORE: {model.score(X_train, y_train)}')
-       f.write(f'TESTING SCORE: {model.score(X_test, y_test)}')
-       f.write('--------------------------------------')
+       f.write(f'{datetime.datetime.now()}\n')
+       f.write('XGBOOST REGRESSION - HYPERPARAMETER TUNING\n')
+       f.write('Best parameters:\n')
+       f.write(f'{best_params}\n')
+       f.write(f'-------------------------------\n')
+       f.write(f"Mean absolute error = {round(sm.mean_absolute_error(y_test, y_preds), 4)}\n")
+       f.write(f"Mean squared error = {round(sm.mean_squared_error(y_test, y_preds), 4)}\n") 
+       f.write(f"Median absolute error = {round(sm.median_absolute_error(y_test, y_preds), 4)}\n")
+       f.write(f"Explain variance score = {round(sm.explained_variance_score(y_test, y_preds), 4)}\n")
+       f.write(f"R2 score *coefficient of Determination = {round(sm.r2_score(y_test, y_preds), 4)}\n")
+       f.write('--------------------------------------\n')
+       f.write(f'TRAINING SCORE: {model.score(X_train, y_train)}\n')
+       f.write(f'TESTING SCORE: {model.score(X_test, y_test)}\n')
+       f.write('--------------------------------------\n')
        kfold = KFold(n_splits = 5)
        scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=kfold)
-       f.write(f'Cross validation scores: \n {scores}') 
+       f.write(f'Cross validation scores: \n {scores}\n') 
+       f.write('\n \n') 

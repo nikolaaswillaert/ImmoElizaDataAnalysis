@@ -1,0 +1,17 @@
+2023-07-20 10:32:02.611317
+XGBOOST REGRESSION - HYPERPARAMETER TUNING
+Best parameters:
+{'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.1, 'max_depth': 10, 'min_child_weight': 1}
+-------------------------------
+Mean absolute error = 52476.0407
+Mean squared error = 5472816018.9339
+Median absolute error = 36945.1875
+Explain variance score = 0.816
+R2 score *coefficient of Determination = 0.816
+--------------------------------------
+TRAINING SCORE: 0.0670095733203645
+TESTING SCORE: 0.017135458366615897
+--------------------------------------
+Cross validation scores: 
+ [0.77137648 0.78232337 0.78440089 0.775395   0.75807758]
+
