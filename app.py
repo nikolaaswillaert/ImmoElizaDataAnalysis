@@ -6,7 +6,6 @@ from pydantic import BaseModel, validator
 from src.predict import predict_price
 from src.preprocessing import preprocess_new_data
 
-
 # instantiate the Basemodel of pydantic
 class House(BaseModel):
     property_type: str
@@ -22,11 +21,13 @@ class House(BaseModel):
     latitude:float
     longitude:float
 
+    # add some validation checks
     @validator('property_type')
     def propertytype_cls(cls, value: str) -> str:
         if value not in ['HOUSE', 'APARTMENT']:
             raise ValueError("Wrong value: Please fill out 1 value from this list: ['HOUSE', 'APARTMENT']")
-    
+        return value
+
     @validator('property_subtype')
     def propertysubtype_cls(cls, value: str) -> str:
         if value not in ['HOUSE','VILLA','APARTMENT','MIXED_USE_BUILDING',
@@ -36,34 +37,40 @@ class House(BaseModel):
                                         'COUNTRY_COTTAGE','CHALET','BUNGALOW','FARMHOUSE',
                                         'MANOR_HOUSE','KOT']:
             raise ValueError('Wrong value: Please check out the data-format to see possible entries (/docs)')
-       
+        return value
+
     @validator('kitchen')
     def kitchen_cls(cls, value: float) -> float:
         if value not in ['USA_HYPER_EQUIPPED' , 'SEMI_EQUIPPED', 'HYPER_EQUIPPED',
                                 'USA_INSTALLED', 'INSTALLED', 'NOT_DEFINED', 'USA_SEMI_EQUIPPED',
                                 'NOT_INSTALLED', 'USA_UNINSTALLED']:
             raise ValueError('Wrong value: Please check out the data-format to see possible entries (/docs)')
-
+        return value
+    
     @validator('latitude')
     def latitude_cls(cls, value: float) -> float:
         if value < 0:
             raise ValueError("latitude must be a positive number")
+        return value
     
     @validator('longitude')
     def longitude_cls(cls, value: float) -> float:
         if value < 0:
             raise ValueError("longitude must be a positive number")
-
+        return value
+    
     @validator('number_facades')
     def number_facades_cls(cls, value: float) -> float:
         if value < 0:
             raise ValueError("Number of facades cannot be less than 0")
-
+        return value
+    
     @validator('surface_land')
     def surface_land_cls(cls, value: float) -> float:
         if value < 0:
             raise ValueError("Surface land cannot be less than 0")
-
+        return value
+    
 # Declaring our FastAPI instance
 app = FastAPI()
 
