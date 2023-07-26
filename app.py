@@ -2,7 +2,7 @@
 import pandas as pd
 import json
 from fastapi import FastAPI
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 from src.predict import predict_price
 from src.preprocessing import preprocess_new_data
 
@@ -22,12 +22,54 @@ class House(BaseModel):
     latitude:float
     longitude:float
 
+    @validator('property_type')
+    def propertytype_cls(cls, value: str) -> str:
+        if value not in ['HOUSE', 'APARTMENT']:
+            raise ValueError("Wrong value: Please fill out 1 value from this list: ['HOUSE', 'APARTMENT']")
+    
+    @validator('property_subtype')
+    def propertysubtype_cls(cls, value: str) -> str:
+        if value not in ['HOUSE','VILLA','APARTMENT','MIXED_USE_BUILDING',
+                                        'APARTMENT_BLOCK','DUPLEX','FLAT_STUDIO','MANSION',
+                                        'EXCEPTIONAL_PROPERTY','GROUND_FLOOR','PENTHOUSE','TOWN_HOUSE',
+                                        'TRIPLEX','SERVICE_FLAT','OTHER_PROPERTY','LOFT',
+                                        'COUNTRY_COTTAGE','CHALET','BUNGALOW','FARMHOUSE',
+                                        'MANOR_HOUSE','KOT']:
+            raise ValueError('Wrong value: Please check out the data-format to see possible entries (/docs)')
+       
+    @validator('kitchen')
+    def kitchen_cls(cls, value: float) -> float:
+        if value not in ['USA_HYPER_EQUIPPED' , 'SEMI_EQUIPPED', 'HYPER_EQUIPPED',
+                                'USA_INSTALLED', 'INSTALLED', 'NOT_DEFINED', 'USA_SEMI_EQUIPPED',
+                                'NOT_INSTALLED', 'USA_UNINSTALLED']:
+            raise ValueError('Wrong value: Please check out the data-format to see possible entries (/docs)')
+
+    @validator('latitude')
+    def latitude_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("latitude must be a positive number")
+    
+    @validator('longitude')
+    def longitude_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("longitude must be a positive number")
+
+    @validator('number_facades')
+    def number_facades_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Number of facades cannot be less than 0")
+
+    @validator('surface_land')
+    def surface_land_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Surface land cannot be less than 0")
+
 # Declaring our FastAPI instance
 app = FastAPI()
 
 # handling get request
 @app.get('/')
-def main():
+async def main():
     return {'message': 'Welcome to my House price prediction model',
             'INFO': 'See the data section to check what features need to be sent - either float or one of the items in the lists',
             "data-format": {
@@ -57,7 +99,9 @@ def main():
 
 # handling post request
 @app.post('/predict')
-async def predict_house_price(data: dict):
+async def predict_house_price(data: House):
+    data = json.loads(data.json())
+
     df = pd.DataFrame(data, index=[0])
     df = preprocess_new_data(df)
     predictions = predict_price(df)
