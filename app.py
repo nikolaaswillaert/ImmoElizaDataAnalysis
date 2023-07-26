@@ -31,7 +31,7 @@ def main():
     return {'message': 'Welcome to my House price prediction model',
             'INFO': 'See the data section to check what features need to be sent - either float or one of the items in the lists',
             "data-format": {
-                    "property-type": ['HOUSE', 'APARTMENT'],
+                    "property_type": ['HOUSE', 'APARTMENT'],
                     "property_subtype": ['HOUSE','VILLA','APARTMENT','MIXED_USE_BUILDING',
                                         'APARTMENT_BLOCK','DUPLEX','FLAT_STUDIO','MANSION',
                                         'EXCEPTIONAL_PROPERTY','GROUND_FLOOR','PENTHOUSE','TOWN_HOUSE',
@@ -57,7 +57,7 @@ def main():
 
 # handling post request
 @app.post('/predict')
-def predict_house_price(data: dict):
+async def predict_house_price(data: dict):
     df = pd.DataFrame(data, index=[0])
     df = preprocess_new_data(df)
     predictions = predict_price(df)
@@ -66,6 +66,6 @@ def predict_house_price(data: dict):
     json_string = json.dumps(preds)
 
     response = {
-        "PREDICTION (PRICE)": f"{preds}",
+        "PREDICTION (PRICE)": f"{preds[0]}",
     }
     return response
