@@ -2,7 +2,7 @@ import time
 import datetime
 import pandas as pd
 import sklearn.metrics as sm
-import src.model_functions as mf
+from ...src.model_functions import train_XGBoost_regression
 from xgboost import XGBRegressor
 from sklearn.model_selection import KFold
 from sklearn.model_selection import GridSearchCV
@@ -39,7 +39,7 @@ def preprocess_data():
     postcodes.head()
 
     # Load in cleaned dataset
-    df = pd.read_csv('data/cleaned.csv').drop('Unnamed: 0', axis=1)
+    df = pd.read_csv('../../data/cleaned.csv').drop('Unnamed: 0', axis=1)
     df.drop_duplicates()
 
     # merge postalcodes with the cleaned dataset
