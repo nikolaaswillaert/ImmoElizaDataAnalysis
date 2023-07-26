@@ -1,8 +1,11 @@
 # Importing Necessary modules
+import pandas as pd
+import json
 from fastapi import FastAPI
 from pydantic import BaseModel
-from src.predict import predict_new_data
+from src.predict import predict_price
 from src.preprocessing import preprocess_new_data
+
 
 # instantiate the Basemodel of pydantic
 class House(BaseModel):
@@ -53,6 +56,16 @@ def main():
             }
 
 # handling post request
-@app.post('/predict/')
-def predict_price(data: House):
-    data = data.dict()
+@app.post('/predict')
+def predict_house_price(data: dict):
+    df = pd.DataFrame(data, index=[0])
+    df = preprocess_new_data(df)
+    predictions = predict_price(df)
+    
+    preds = predictions.tolist()
+    json_string = json.dumps(preds)
+
+    response = {
+        "PREDICTION (PRICE)": f"{preds}",
+    }
+    return response

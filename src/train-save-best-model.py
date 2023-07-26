@@ -4,11 +4,14 @@ import datetime
 import pandas as pd
 import sklearn.metrics as sm
 from model_functions import train_XGBoost_regression
+from sklearn.preprocessing import MinMaxScaler, OneHotEncoder
 from xgboost import XGBRegressor
 from sklearn.model_selection import KFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split, cross_val_score
 import pickle
+import joblib
+
 
 def grid_search_xgb(X_train, y_train):
     params = {
@@ -50,11 +53,19 @@ def preprocess_data(df):
     numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number_facades','latitude','longitude']
 
     # create dummies van categorical columns
-    dummies = pd.get_dummies(df[cat_cols], columns=cat_cols)
+    #dummies = pd.get_dummies(df[cat_cols], columns=cat_cols)
+
+    encoder = OneHotEncoder(handle_unknown='ignore')
+    encoded_data = encoder.fit_transform(df[cat_cols])
+    onehotdata = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_names_out(cat_cols))
+
+    joblib.dump(encoder, 'models/encoder.joblib')
 
     # merge the 
-    new_df = pd.concat([df[numerical_cols], dummies], axis=1)
-    new_df.reset_index().drop(columns=['index'], inplace=True)
+    new_df = pd.concat([df[numerical_cols], onehotdata], axis=1)
+    new_df.dropna(how='all')
+    #new_df.reset_index().drop(columns=['index'], inplace=True)
+    print(new_df)
     return new_df
 
 if __name__ == '__main__':
@@ -72,22 +83,36 @@ if __name__ == '__main__':
     print('--------------------------------------')
     start_time = time.time()
     # Use GridSearchCV to try and get the best parameters
-    grid_results, best_params = grid_search_xgb(X_train, y_train)
+    #grid_results, best_params = grid_search_xgb(X_train, y_train)
     print('--------------------------------------')
-    print(f"Best Parameters (from GridSearchCV): {best_params}")
+    #print(f"Best Parameters (from GridSearchCV): {best_params}")
     print('--------------------------------------')
     end_time = time.time()
     print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 2)} minutes')
     print('--------------------------------------')
     print("Re-training model with best parameters . . .")
-    y_test, y_preds, model, X_train, y_train, X_test = train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
+    
+    grid_results = {'colsample_bytree': 0.3, 'gamma': 0.0, 'learning_rate': 0.15, 'max_depth': 8, 'min_child_weight': 1}
+    model = XGBRegressor(**grid_results)
+
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=22)
+
+    scaler = MinMaxScaler()
+    norm_x_train = scaler.fit_transform(X_train)
+    norm_x_test = scaler.transform(X_test)
+    
+    joblib.dump(scaler, 'models/scaler.joblib')
+
+    model.fit(norm_x_train, y_train)
+    y_preds = model.predict(norm_x_test)
+    
     end_time = time.time()
     print('--------------------------------------')
     with open('output/XGB_best_model_details.txt', 'a') as f:
        f.write(f'{datetime.datetime.now()}\n')
        f.write('XGBOOST REGRESSION - HYPERPARAMETER TUNING\n')
        f.write('Best parameters:\n')
-       f.write(f'{best_params}\n')
+       #f.write(f'{best_params}\n')
        f.write(f'-------------------------------\n')
        f.write(f"Mean absolute error = {round(sm.mean_absolute_error(y_test, y_preds), 4)}\n")
        f.write(f"Mean squared error = {round(sm.mean_squared_error(y_test, y_preds), 4)}\n") 
