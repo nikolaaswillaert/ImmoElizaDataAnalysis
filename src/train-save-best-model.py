@@ -61,6 +61,7 @@ if __name__ == '__main__':
     # retrieve the cleaned dataset with additional post codes features
     df = pd.read_csv('data/cleaned.csv').drop('Unnamed: 0', axis=1)
     new_df = preprocess_data(df)
+
     # Define X and y (features and target)
     X = new_df.drop(columns=['price'], axis=1)
     y = new_df['price']

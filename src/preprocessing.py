@@ -21,8 +21,8 @@ def preprocess_new_data(json_data):
 
     # Define the categorical columns + numerical columns
     cat_cols = ['property_type','property_subtype','kitchen','building_state','region','province']
-    numerical_cols = ['price','number_rooms', 'living_area', 'surface_land', 'number_facades','latitude','longitude']
-
+    numerical_cols = ['number_rooms', 'living_area', 'surface_land', 'number_facades','latitude','longitude']
+    
     # create dummies van categorical columns
     dummies = pd.get_dummies(df[cat_cols], columns=cat_cols)
 
@@ -30,8 +30,7 @@ def preprocess_new_data(json_data):
     new_df = pd.concat([df[numerical_cols], dummies], axis=1)
     new_df.reset_index().drop(columns=['index'], inplace=True)
 
-    X = new_df.drop(columns=['price'], axis=1)
-    y = new_df['price']
+    X = new_df
 
     # Scale the X 
     scaler = MinMaxScaler()

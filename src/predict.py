@@ -10,8 +10,7 @@ def predict_new_data(new_data):
         pickle_model = pickle.load(f)
     #new data is in json format
     predictions = pickle_model.predict(df)
-    print(predictions)
-    print(len(predictions))
+    return predictions
 
 # new_data = pd.read_csv('data/cleaned.csv')
 # json_data = new_data.to_json()
