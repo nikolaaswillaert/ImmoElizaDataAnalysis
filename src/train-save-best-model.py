@@ -1,12 +1,14 @@
+import os
 import time
 import datetime
 import pandas as pd
 import sklearn.metrics as sm
-from ...src.model_functions import train_XGBoost_regression
+from model_functions import train_XGBoost_regression
 from xgboost import XGBRegressor
 from sklearn.model_selection import KFold
 from sklearn.model_selection import GridSearchCV
 from sklearn.model_selection import train_test_split, cross_val_score
+import pickle
 
 def grid_search_xgb(X_train, y_train):
     params = {
@@ -17,7 +19,6 @@ def grid_search_xgb(X_train, y_train):
             'min_child_weight': [1, 3, 5],
             'gamma': [0.0, 0.1, 0.2],
             'colsample_bytree': [0.1,0.2,0.3],
-            
         }
     
     gsc = GridSearchCV(
@@ -32,15 +33,12 @@ def grid_search_xgb(X_train, y_train):
     best_params = grid_result.best_params_
     return grid_result, best_params
 
-def preprocess_data():
+def preprocess_data(df):
+    df.drop_duplicates()
     # Read in and clean postcode dataframe 
     postcodes = pd.read_csv('data/zipcode-belgium.csv')
     postcodes = postcodes.drop(columns=['lat', 'long'])
     postcodes.head()
-
-    # Load in cleaned dataset
-    df = pd.read_csv('../../data/cleaned.csv').drop('Unnamed: 0', axis=1)
-    df.drop_duplicates()
 
     # merge postalcodes with the cleaned dataset
     postalcode_merge_df = pd.merge(postcodes, df, on='locality', how='left')
@@ -61,7 +59,8 @@ def preprocess_data():
 
 if __name__ == '__main__':
     # retrieve the cleaned dataset with additional post codes features
-    new_df = preprocess_data()
+    df = pd.read_csv('data/cleaned.csv').drop('Unnamed: 0', axis=1)
+    new_df = preprocess_data(df)
     # Define X and y (features and target)
     X = new_df.drop(columns=['price'], axis=1)
     y = new_df['price']
@@ -80,7 +79,7 @@ if __name__ == '__main__':
     print(f'Elapsed time to get best parameters: {round(((end_time - start_time)/60), 2)} minutes')
     print('--------------------------------------')
     print("Re-training model with best parameters . . .")
-    y_test, y_preds, model, X_train, y_train, X_test = mf.train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
+    y_test, y_preds, model, X_train, y_train, X_test = train_XGBoost_regression(X, y, 'XGBoost - GridSearch Optimized', **best_params)
     end_time = time.time()
     print('--------------------------------------')
     with open('output/XGB_best_model_details.txt', 'a') as f:
@@ -102,3 +101,6 @@ if __name__ == '__main__':
        scores = cross_val_score(model, X_train, y_train, scoring='r2', cv=kfold)
        f.write(f'Cross validation scores: \n {scores}\n') 
        f.write('\n \n') 
+    
+    with open('models/xgb_regression_model.pkl', 'wb') as f:
+        pickle.dump(model, f)
