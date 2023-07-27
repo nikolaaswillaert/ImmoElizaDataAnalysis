@@ -3,6 +3,9 @@ import json
 import joblib
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.model_selection import train_test_split
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+import pickle
 
 # get new data (in json format) and preprocess data - return Dataframe
 def preprocess_new_data(df):
@@ -28,6 +31,5 @@ def preprocess_new_data(df):
     X_test_merged = pd.concat([pd.DataFrame(X_test_scale, columns=numerical_cols), X_test_enc_df], axis=1)
 
     return X_test_merged
-
 
 

@@ -59,7 +59,7 @@ def preprocess_data(df):
     encoded_data = encoder.fit_transform(df[cat_cols])
     onehotdata = pd.DataFrame(encoded_data.toarray(), columns=encoder.get_feature_names_out(cat_cols))
 
-    joblib.dump(encoder, 'models/encoder.joblib')
+    # joblib.dump(encoder, 'models/encoder.joblib')
 
     # merge the 
     new_df = pd.concat([df[numerical_cols], onehotdata], axis=1)
@@ -77,7 +77,7 @@ if __name__ == '__main__':
     X = new_df.drop(columns=['price'], axis=1)
     y = new_df['price']
     # train test split
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=22)
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=22)
     print('--------------------------------------')
     print("Getting the best parameters for Xgboost through GridSearchCV")
     print('--------------------------------------')
@@ -101,7 +101,7 @@ if __name__ == '__main__':
     norm_x_train = scaler.fit_transform(X_train)
     norm_x_test = scaler.transform(X_test)
     
-    joblib.dump(scaler, 'models/scaler.joblib')
+    # joblib.dump(scaler, 'models/scaler.joblib')
 
     model.fit(norm_x_train, y_train)
     y_preds = model.predict(norm_x_test)
@@ -128,5 +128,5 @@ if __name__ == '__main__':
        f.write(f'Cross validation scores: \n {scores}\n') 
        f.write('\n \n') 
     
-    with open('models/xgb_regression_model.pkl', 'wb') as f:
-        pickle.dump(model, f)
+    # with open('models/xgb_regression_model.pkl', 'wb') as f:
+    #     pickle.dump(model, f)

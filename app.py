@@ -47,6 +47,50 @@ class House(BaseModel):
             raise ValueError('Wrong value: Please check out the data-format to see possible entries (/docs)')
         return value
     
+    @validator('building_state')
+    def buildingst_cls(cls, value: str) -> str:
+        if value not in ["NEW" , "GOOD" , "TO RENOVATE" , "JUST RENOVATED" , "TO REBUILD"]:
+            raise ValueError("Wrong value: Please fill out 1 value from this list: [NEW, GOOD, TO RENOVATE, JUST RENOVATED, TO REBUILD]")
+        return value
+
+    @validator('region')
+    def region_cls(cls, value: str) -> str:
+        if value not in ['Brussels' , 'Flanders' , 'Wallonie']:
+            raise ValueError("Wrong value: Please fill out 1 value from this list: ['Brussels' , 'Flanders' , 'Wallonie']")
+        return value
+    
+    @validator('province')
+    def province_cls(cls, value: str) -> str:
+        if value not in ['Brussels','Antwerp','Walloon Brabant','Flemish Brabant',
+                                'East Flanders','Limburg','West Flanders','Liège','Hainaut',
+                                'Namur','Luxembourg']:
+            raise ValueError("Wrong value: Please fill out 1 value from the list mentioned in /docs")
+        return value
+    
+    @validator('number_rooms')
+    def number_rooms_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Number of rooms must be a positive number")
+        return value
+    
+    @validator('living_area')
+    def living_area_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Living area must be a positive number")
+        return value
+
+    @validator('surface_land')
+    def surface_land_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Surface land cannot be less than 0")
+        return value
+    
+    @validator('number_facades')
+    def number_facades_cls(cls, value: float) -> float:
+        if value < 0:
+            raise ValueError("Number of facades cannot be less than 0")
+        return value
+    
     @validator('latitude')
     def latitude_cls(cls, value: float) -> float:
         if value < 0:
@@ -57,18 +101,6 @@ class House(BaseModel):
     def longitude_cls(cls, value: float) -> float:
         if value < 0:
             raise ValueError("longitude must be a positive number")
-        return value
-    
-    @validator('number_facades')
-    def number_facades_cls(cls, value: float) -> float:
-        if value < 0:
-            raise ValueError("Number of facades cannot be less than 0")
-        return value
-    
-    @validator('surface_land')
-    def surface_land_cls(cls, value: float) -> float:
-        if value < 0:
-            raise ValueError("Surface land cannot be less than 0")
         return value
     
 # Declaring our FastAPI instance
@@ -118,5 +150,6 @@ async def predict_house_price(data: House):
 
     response = {
         "PREDICTION (PRICE)": f"{preds[0]}",
+        "status code": f'200'
     }
     return response
