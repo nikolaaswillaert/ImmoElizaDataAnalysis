@@ -27,3 +27,32 @@ In the **'model_exploration.ipynb'** notebook I have trained a set of different 
 
 ### :office: Apartments only <br>
 ![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c36fcd17-f2e8-445c-8638-5951389dffdf)
+
+## API - Fastapi
+
+You can access the api running on:
+```
+https://house-prediction-model-api.onrender.com
+```
+
+or send a curl request to receive the price prediction:
+```
+curl -X 'POST' \
+  'https://house-prediction-model-api.onrender.com/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "property_type": "HOUSE",
+  "property_subtype": "VILLA",
+  "kitchen": "SEMI_EQUIPPED",
+  "building_state": "TO RENOVATE",
+  "region": "Flanders",
+  "province": "West Flanders",
+  "number_rooms": 4,
+  "living_area": 150,
+  "surface_land": 200,
+  "number_facades": 2,
+  "latitude": 51.208887,
+  "longitude": 3.445221
+}'
+```
