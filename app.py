@@ -146,7 +146,6 @@ async def predict_house_price(data: House):
     predictions = predict_price(df)
     
     preds = predictions.tolist()
-    json_string = json.dumps(preds)
 
     response = {
         "PREDICTION (PRICE)": f"{preds[0]}",
