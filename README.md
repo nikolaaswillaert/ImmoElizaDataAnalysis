@@ -34,8 +34,12 @@ You can access the api running on:
 ```
 https://house-prediction-model-api.onrender.com
 ```
+or go to the following link to send the house data directly through the portal:
+```
+https://house-prediction-model-api.onrender.com/docs
+```
 
-or send a curl request to receive the price prediction:
+or send a curl request to receive the price prediction, where the -d flag is followed by a dictionary with the required house features.
 ```
 curl -X 'POST' \
   'https://house-prediction-model-api.onrender.com/predict' \
