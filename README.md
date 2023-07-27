@@ -4,7 +4,7 @@
 
 In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result. The model i chose is XGBoostRegression model (with finetuned parameters)
 
-## Summary of model evaluation
+## Summary of the evaluation of the XGBoost Regression model
 
 :pushpin: **Mean Absolute Error (MAE)** is 54885.9907: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
 
