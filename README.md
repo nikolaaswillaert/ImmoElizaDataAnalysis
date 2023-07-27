@@ -28,7 +28,7 @@ In the **'model_exploration.ipynb'** notebook I have trained a set of different 
 ### :office: Apartments only <br>
 ![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c36fcd17-f2e8-445c-8638-5951389dffdf)
 
-# Deployment
+# :globe_with_meridians: Deployment :globe_with_meridians:
 ## API - Fastapi
 
 You can access the api running on:
