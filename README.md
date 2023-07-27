@@ -2,7 +2,7 @@
 
 ## Model Selection
 
-In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result. The model i chose is XGBoostRegression model (with finetuned parameters)
+In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result. The model I chose is XGBoostRegression model (with finetuned parameters)
 
 ## Summary of the evaluation of the XGBoost Regression model
 
