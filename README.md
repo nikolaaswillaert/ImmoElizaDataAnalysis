@@ -10,7 +10,7 @@ In the **'model_exploration.ipynb'** notebook I have trained a set of different 
 
 :pushpin: **Explained Variance Score** is 0.8035: The explained variance score assesses the proportion of variance in the target variable that the model captures. A value of 0.8074 indicates that the model explains 80.74% of the total variance in the data, which is quite good.
 
-:pushpin: **R-squared (R2)** Score is 0.8034: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
+:pushpin: **R-squared (R2)** Score is 0.8003: The R2 score, also known as the coefficient of determination, is the same as the explained variance score in this case. It indicates that 80.74% of the variance in the target variable is explained by the model.
 
 :card_index: In summary, the model achieves a **high level of accuracy**, capturing a significant portion of the variance in the data and making predictions that are **close to the actual values**.
 
@@ -60,4 +60,11 @@ curl -X 'POST' \
   "latitude": 51.208887,
   "longitude": 3.445221
 }'
+```
+The response you will receive will be in the following format:
+```
+{
+  "PREDICTION (PRICE)": "362668.875",
+  "status code": "200"
+}
 ```
