@@ -1,10 +1,10 @@
 # Importing Necessary modules
 import pandas as pd
 import json
+import joblib
 from fastapi import FastAPI
 from pydantic import BaseModel, validator
-from src.predict import predict_price
-from src.preprocessing import preprocess_new_data
+from src.train_save_best_model import get_model
 
 # instantiate the Basemodel of pydantic
 class House(BaseModel):
@@ -127,12 +127,12 @@ async def main():
                     "province":['Brussels','Antwerp','Walloon Brabant','Flemish Brabant',
                                 'East Flanders','Limburg','West Flanders','Liège','Hainaut',
                                 'Namur','Luxembourg'],
-                    "number_rooms":"float - f.e.: 2.0",
-                    "living_area":"float -f.e.: 297.0",
-                    "surface_land":"float -f.e.: 713.0",
-                    "number_facades":"float - f.e.: 4.0",
-                    "latitude":"float - f.e.: 50.846557",
-                    "longitude":"float - f.e.: 4.351697",
+                    "number_rooms":"float - f.e.: 2.0 (positive floats only)",
+                    "living_area":"float -f.e.: 297.0 (positive floats only)",
+                    "surface_land":"float -f.e.: 713.0 (positive floats only)",
+                    "number_facades":"float - f.e.: 4.0 (positive floats only)",
+                    "latitude":"float - f.e.: 50.846557 (positive floats only)",
+                    "longitude":"float - f.e.: 4.351697 (positive floats only)",
                 }
             }
 
@@ -142,13 +142,16 @@ async def predict_house_price(data: House):
     data = json.loads(data.json())
 
     df = pd.DataFrame(data, index=[0])
-    df = preprocess_new_data(df)
-    predictions = predict_price(df)
+
+    # model = joblib.load('models/xgb_model.joblib')
+    model, r2 = get_model()
+    predictions = model.predict(df)
     
     preds = predictions.tolist()
 
     response = {
         "PREDICTION (PRICE)": f"{preds[0]}",
-        "status code": f'200'
+        "status code": f'200',
+        "r2_score_model": f'{r2}'
     }
     return response
