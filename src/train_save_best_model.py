@@ -37,7 +37,6 @@ def get_model():
     y_preds = model.predict(X_test)
 
     r2 = r2_score(y_test, y_preds)
-    print(r2)
 
     return model, r2
 
