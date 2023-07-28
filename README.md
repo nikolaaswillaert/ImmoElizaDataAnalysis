@@ -2,9 +2,9 @@
 
 ## Model Selection
 
-In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result. The model i chose is XGBoostRegression model (with finetuned parameters)
+In the **'model_exploration.ipynb'** notebook I have trained a set of different Linear and non-linear models to see how they would perform with my dataset. After the benchmark of these models I select the best one and fine tune the hyperparameters of the model to get the best possible result. The model I chose is XGBoostRegression model (with finetuned parameters)
 
-## Summary of model evaluation
+## Summary of the evaluation of the XGBoost Regression model
 
 :pushpin: **Mean Absolute Error (MAE)** is 54885.9907: This indicates that, on average, the model's predictions differ from the actual values by approximately 54042.1821 units. Lower MAE values indicate better accuracy.
 
@@ -28,14 +28,19 @@ In the **'model_exploration.ipynb'** notebook I have trained a set of different 
 ### :office: Apartments only <br>
 ![XGBoost Regression (Apartments only)](https://github.com/nikolaaswillaert/ImmoElizaDataAnalysis/assets/106211266/c36fcd17-f2e8-445c-8638-5951389dffdf)
 
+# :globe_with_meridians: Deployment :globe_with_meridians:
 ## API - Fastapi
 
 You can access the api running on:
 ```
 https://house-prediction-model-api.onrender.com
 ```
+or go to the following link to send the house data directly through the portal:
+```
+https://house-prediction-model-api.onrender.com/docs
+```
 
-or send a curl request to receive the price prediction:
+or send a curl request to receive the price prediction, where the -d flag is followed by a dictionary with the required house features.
 ```
 curl -X 'POST' \
   'https://house-prediction-model-api.onrender.com/predict' \
