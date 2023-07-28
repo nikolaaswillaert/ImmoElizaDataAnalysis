@@ -152,6 +152,5 @@ async def predict_house_price(data: House):
     response = {
         "PREDICTION (PRICE)": f"{preds[0]}",
         "status code": f'200',
-        "r2_score_model": f'{r2}'
     }
     return response
